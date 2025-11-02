@@ -93,7 +93,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 0px;
     z-index: 10;
     transition: right 0.4s ease;
 }
@@ -1267,3 +1266,4 @@ footer {
 
 
 }
+
