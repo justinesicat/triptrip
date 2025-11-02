@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triptrip | your travel destination guide</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Outside References -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo-search">
+            <!-- triptrip Logo -->
+            <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="SEARCH ...">
+                <button onclick="location.href='#'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Hidden Checkbox for the HAMBURGER -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- HAMBURGER icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!-- Drawer for Navigation Drawer -->
+        <label for="menu-toggle" class="overlay"></label>
+
+        <!-- Drawer -->
+        <nav class="nav-drawer">
+            <!-- Close for Navigation Drawer -->
+            <label for="menu-toggle" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- Navigation Links -->
+            <ul class="nav_links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+
+            <!-- Dropdown Link -->
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-map"></i> TRIPS</a>
+                <div class="dropdown-center">
+                    <ul class="dropdown-content">
+                        <li><a href="#">FEATURED TRIPS</a></li>
+                        <li><a href="#">USER REVIEWS</a></li>
+                </ul>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            <li><a href="#"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="herotext">
+                <p class="texta">
+                    <span>go</span>
+                    <span>some</span>
+                    <span>where</span>
+                </p>
+                    <p class="textb">
+                    <span>you'll</span>
+                    <span>never</span>
+                    <span>forget :)</span>
+                </p>
+                    <p class="textc">
+                    because the best memories don't live on your feed — they start with a <b>trip</b>.
+                </p>
+                <div class="hero-credit">
+                    <p><b>Svaneti, Georgia</b> — Photo from transcaucasiantrail.org</p>
+                </div>
+        </div>
+    </section>
+
+    <section class="search">
+        <img class="rip-top" src="images/sectiontop/riptop.webp" alt="">
+        <div class="search-content">
+            <p class="heading">your vibes meet the trip<span>
+            <p class="subtext">find destinations that match your mood, budget, and bucket list energy.</p>
+
+            <form class="trip-search">
+                <div class="trip-row">
+                    <select name="location">
+                        <option value="">Select Destination</option>
+                        <option value="beach">Beach</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="city">City</option>
+                    </select>
+
+                    <select name="trip-type">
+                        <option value="">Trip Type</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="leisure">Leisure</option>
+                        <option value="cultural">Cultural</option>
+                    </select>
+                </div>
+
+                <!-- budget-container is not functional yet! -->
+
+                <div class="budget-container">
+                    <label class="budget">&nbsp;&nbsp;Budget&nbsp;Range&nbsp;:</label>
+                    <input type="range" name="budget" min="1000.00" max="100000.00" step="1000.00" value="1000.00">
+                    <span class="budget-value">₱&nbsp;1000.00</span>
+                </div>
+
+                <!-- Find Trips button is not functional yet! -->
+
+                <div class="findtripbtn">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Find Trips</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="featured">
+        <img class="circ-top" src="images/sectiontop/circtop.webp" alt="">
+        <div class="featured-content">
+            <p class="heading">featured trips</p>
+            <p class="subtext">from hidden gems to iconic spots, these featured trips are crafted to inspire your next great adventure.</p>
+        
+        <div class="carousel-center">
+            <div class="gallery-container">
+
+                <div class="gallery">
+                    <a target="blank">
+                        <img src="images/The Grand Palace.jpg" alt="Thailand">
+                    </a>
+                    <div class="description">
+                        Thailand
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <a target="blank">
+                        <img src="images/Meiji Jingu Shrine 2.jpg" alt="Thailand">
+                    </a>
+                    <div class="description">
+                        Japan
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <a target="blank">
+                        <img src="images/Eiffel Tower 2.jpg" alt="Eiffel Tower">
+                    </a>
+                    <div class="description">
+                        France
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <p class="gallery-scroll-hint">←&nbsp;&nbsp;swipe to browse&nbsp;&nbsp;→</p>
+    </section>
+
+    <section class="reviews">
+        <img class="news-top" src="images/sectiontop/newstop.webp" alt="">
+        <div class="reviews-content">
+            <p class="heading">user reviews</p>
+            <p class="subtext">real stories, real journeys. see what other explorers loved (or didn’t) about their trips.
+            </p>
+
+            <!-- List of Ratings -->
+            <div class="stamp-center">
+                <div class="stamp-container">
+                    <div class="stamp">
+                        <img class="stampimg" src="images/poststamp.png" alt="stamp background">
+
+                        <img class="stamp-photo" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Coron_island_-_Straight_out_of_a_dream.jpg" 
+                        alt="coron destination photo">
+
+                        <div class="stamp-inner">
+                            <div class="stamp-top">CORON<br>PHILIPPINES</div>
+                            <div class="stamp-rating">6</div>
+                            <div class="stamp-bottom">★★★★★★<br><b>USER RATING</b><br><i>Justine S.</i></div>
+                        </div>
+                    </div>
+
+                    <div class="stamp">
+                        <img class="stampimg" src="images/poststamp.png" alt="stamp background">
+
+                        <img class="stamp-photo" 
+                        src="https://i0.wp.com/mytravelation.com/wp-content/uploads/2023/11/Jakarta.jpeg" 
+                        alt="jakarta destination photo">
+
+                        <div class="stamp-inner">
+                            <div class="stamp-top">JAKARTA<br>INDONESIA</div>
+                            <div class="stamp-rating">8</div>
+                            <div class="stamp-bottom">★★★★★★★★<br><b>USER RATING</b><br><i>Iman K.</i></div>
+                        </div>
+                    </div>
+
+                    <div class="stamp">
+                        <img class="stampimg" src="images/poststamp.png" alt="stamp background">
+
+                        <img class="stamp-photo" 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVau8eiN9sfA4T1oiotpeU_n3RkssGmmBiuw&s" 
+                        alt="rio de janeiro destination photo">
+
+                        <div class="stamp-inner">
+                            <div class="stamp-top">RIO DE JANEIRO<br>BRAZIL</div>
+                            <div class="stamp-rating">10</div>
+                            <div class="stamp-bottom">★★★★★★★★★★<br><b>USER RATING</b><br><i>Chanelle S.</i></div>
+                        </div>
+                    </div>
+
+                    <div class="stamp">
+                        <img class="stampimg" src="images/poststamp.png" alt="stamp background">
+
+                        <img class="stamp-photo" 
+                        src="https://www.consulting.us/illustrations/news/detail/2025-06-27-074212411-New_York_ranked_best_American_city_for_9th_year_in_a_row.jpg" 
+                        alt="new york destination photo">
+
+                        <div class="stamp-inner">
+                            <div class="stamp-top">NEW YORK<br>U.S</div>
+                            <div class="stamp-rating">7</div>
+                            <div class="stamp-bottom">★★★★★★★<br><b>USER RATING</b><br><i>Guillaume C.</i></div>
+                        </div>
+                    </div>
+
+                    <div class="stamp">
+                        <img class="stampimg" src="images/poststamp.png" alt="stamp background">
+
+                        <img class="stamp-photo" 
+                        src="https://i.natgeofe.com/n/4d23d65c-4be3-4a4f-a708-64ee6016a61b/Milan.jpg" 
+                        alt="milan destination photo">
+
+                        <div class="stamp-inner">
+                            <div class="stamp-top">MILAN<br>ITALY</div>
+                            <div class="stamp-rating">9</div>
+                            <div class="stamp-bottom">★★★★★★★★★<br><b>USER RATING</b><br><i>Adrian Maverick D.</i></div>
+                        </div>
+                    </div>
+
+                    <div class="stamp">
+                        <img class="stampimg" src="images/poststamp.png" alt="stamp background">
+
+                        <img class="stamp-photo" 
+                        src="https://frontier-canada.co.uk/wp-content/uploads/2018/09/ontario-niagara-falls-aerial-holiday800x800.jpg" 
+                        alt="ontario destination photo">
+
+                        <div class="stamp-inner">
+                            <div class="stamp-top">ONTARIO<br>CANADA</div>
+                            <div class="stamp-rating">3</div>
+                            <div class="stamp-bottom">★★★<br><b>USER RATING</b><br><i>Renz Derick R.</i></div>
+                        </div>
+                    </div>
+
+                    <div class="stamp">
+                        <img class="stampimg" src="images/poststamp.png" alt="stamp background">
+
+                        <img class="stamp-photo" 
+                        src="https://www.oystercollection.co.za/wp-content/uploads/2025/05/camps-bay-pic-2-1.png" 
+                        alt="cape town destination photo">
+
+                        <div class="stamp-inner">
+                            <div class="stamp-top">CAPE TOWN<br>SOUTH AFRICA</div>
+                            <div class="stamp-rating">5</div>
+                            <div class="stamp-bottom">★★★★★<br><b>USER RATING</b><br><i>Carl Niccovi S.</i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        <p class="stamp-scroll-hint">←&nbsp;&nbsp;swipe to browse&nbsp;&nbsp;→</p>
+        
+        <img class="news-bot" src="images/sectiontop/newstop.webp" alt="">
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="images/triptripLOGO.png" alt="logo">
+
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 triptrip. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
