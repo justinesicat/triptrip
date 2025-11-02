@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triptrip | your travel destination guide</title>
+
+    <link rel="stylesheet" href="searchstyle.css">
+
+    <!-- Outside References -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo-search">
+            <!-- triptrip Logo -->
+            <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="SEARCH ...">
+                <button onclick="location.href='#'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Hidden Checkbox for the HAMBURGER -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- HAMBURGER icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!-- Drawer for Navigation Drawer -->
+        <label for="menu-toggle" class="overlay"></label>
+
+        <!-- Drawer -->
+        <nav class="nav-drawer">
+            <!-- Close for Navigation Drawer -->
+            <label for="menu-toggle" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- Navigation Links -->
+            <ul class="nav_links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+
+            <!-- Dropdown Link -->
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-map"></i> TRIPS</a>
+                <div class="dropdown-center">
+                    <ul class="dropdown-content">
+                        <li><a href="#">FEATURED TRIPS</a></li>
+                        <li><a href="#">USER REVIEWS</a></li>
+                </ul>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            <li><a href="#"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search">
+            <img class="rip-top" src="images/sectiontop/riptop.webp" alt="">
+
+            <div class="search-content">
+            <p class="heading">search results</p>
+            <p class="subtext">you are looking for "<span id="search-query">Philippines</span>"</p>
+
+            <div class="results-container">
+                <div class="result-card">
+                    <img src="https://res.klook.com/image/upload/fl_lossy.progressive/q_auto/c_fill,w_750/blogen/2018/10/33cfb02a-%E7%A7%81%E4%BA%BA%E5%AF%BC%E8%A7%88%E6%B5%B7%E4%B8%8A%E8%B7%B3%E5%B2%9B%E6%B8%B8.jpg" alt="Boracay Island">
+                    <div class="result-info">
+                        <h3>Boracay Island</h3>
+                        <p>Famous for its white sand beaches, vibrant nightlife, and crystal-clear waters — a must-visit tropical paradise in Aklan.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <img src="https://mediaim.expedia.com/destination/1/dcc4b5ab1c594fa368c2c71f52313040.jpg" alt="Palawan">
+                    <div class="result-info">
+                        <h3>El Nido, Palawan</h3>
+                        <p>Experience limestone cliffs and turquoise lagoons in one of the most breathtaking islands in the Philippines.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <img src="https://images.pexels.com/photos/12914725/pexels-photo-12914725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Baguio City">
+                    <div class="result-info">
+                        <h3>Baguio City</h3>
+                        <p>The City of Pines — known for its cool weather, scenic mountain views, and cozy coffee shops.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <img src="https://www.beyondmydoor.com/wp-content/uploads/2024/03/Kalesa-Ride-Calle-Crisologo%E2%80%8B-Vigan-Philippines-1024x776.webp" alt="Vigan, Ilocos Sur">
+                    <div class="result-info">
+                        <h3>Vigan, Ilocos Sur</h3>
+                        <p>Walk along Calle Crisologo’s cobblestone streets lined with ancestral houses and calesas. 
+                        A timeless glimpse of Spanish-era charm that glows beautifully at night.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <img src="https://thefroggyadventures.com/wp-content/uploads/2024/10/maasin-river-siargao-1080x720.jpg" alt="Siargao Island">
+                    <div class="result-info">
+                        <h3>Siargao Island</h3>
+                        <p>Surf the legendary Cloud 9 waves, dive into rock pools, or relax under swaying palms. 
+                        Siargao is paradise for surfers, adventurers, and dreamers alike.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <img src="https://www.vacationhive.com/images/hives/11/11-banaue-terraces-main-img-new.jpg" alt="Banaue Rice Terraces">
+                    <div class="result-info">
+                        <h3>Banaue Rice Terraces</h3>
+                        <p>Marvel at 2,000-year-old rice terraces carved by the Ifugao people. 
+                        A breathtaking masterpiece that connects travelers with heritage and nature.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <img class="rip-bot" src="images/sectiontop/riptop.webp" alt="">
+        </section>
+    </main>
+
+    
+        <footer>
+        <div class="footer-content">
+            <img class="logo" src="images/triptripLOGO.png" alt="logo">
+
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 triptrip. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

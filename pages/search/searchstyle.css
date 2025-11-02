@@ -1,0 +1,730 @@
+@font-face {
+  font-family: 'Southwell';
+  src: url('font/Southwell.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Medicine';
+  src: url('font/MEDICINE SHOW CAPS.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures full viewport height */
+}
+
+main {
+  flex: 1; /* pushes footer to bottom if content is short */
+}
+
+body {
+    background-image: 
+        linear-gradient(to left, rgba(9, 128, 0, 0.4), rgba(95, 105, 21, 0.6)),
+        url(images/DSCF4977-1-1-e1737482415201.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/** NAVIGATION BAR **/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.logo-search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.logo-white {
+    height: 50px;
+    width: auto;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-left: auto;
+    margin-right: 25px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 0px;
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #056839;
+    font-size: 1rem;
+    padding-right: 5px;
+    flex-shrink: 0;
+}
+
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    transition: right 0.4s ease;
+}
+
+#menu-toggle:checked ~ .nav-drawer {
+    right: 0;
+}
+
+#menu-toggle, .close-icon {
+    display: none;
+}
+
+.menu-icon {
+    margin-left: auto;
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.nav li, a, button {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+    padding-top: 2rem;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+}
+
+.logo-white {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+    filter: brightness(0) invert(1);
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav_links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #056839;
+}
+
+.nav_links .account {
+    color: #056839;
+    padding: 9px 25px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav_links .account:hover {
+    color: white;
+    background-color: #056839;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 22vh;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+    list-style: none;
+}
+
+.dropdown-content li a {
+    padding: 10px 14px;
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+/** SEARCH **/
+
+.search {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
+    padding-top: 8rem;
+}
+
+.search-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0%;
+    padding-bottom: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.search-content {
+    font-size: 3rem;
+}
+
+.search-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #5a4a3f;
+    text-shadow: 0 0 1px black;
+}
+
+.search-content p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    color: #6b5e50;
+    line-height: 1.6;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+/* Card layout */
+.result-card {
+    background: #fffdf8;
+    border: 2px solid #e2d6c5;
+    border-radius: 8px;
+    width: 300px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Image styling */
+.result-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #e2d6c5;
+    flex-shrink: 0;
+}
+
+/* Text container */
+.result-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* Title */
+.result-info h3 {
+    font-family: "Southwell", cursive;
+    font-size: 1.8rem;
+    color: #3a3520;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    line-height: 1.2;
+    min-height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Description */
+.result-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #5a4a3f;
+    line-height: 1.4;
+    flex-grow: 1;
+    margin: 0;
+}
+
+/* View Details button */
+.view-btn {
+    background-color: #5a4a3f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #b89129;
+}
+
+.result-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        url("images/29-05-13_paper06.jpg") center/cover no-repeat,
+        rgba(255, 255, 255, 0.95);
+    background-blend-mode: multiply;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.result-card * {
+    position: relative;
+    z-index: 1;
+}
+
+/** FOOTER **/
+
+footer {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    z-index: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.footer-content .logo {
+    width: 100px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #F7941D;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socials a {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    width: 40px;
+    height: 40px;
+}
+
+.socials a i {
+    font-size: 2rem;
+}
+
+.socials a:hover {
+    color: #F7941D;
+}
+
+.footer-bottom {
+    width: 100%;
+    padding-bottom: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+/** SECTION DESIGN **/
+
+.rip-top {
+    position: absolute;
+    top: 4%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    pointer-events: none;
+}
+
+.rip-bot {
+    position: absolute;
+    bottom: -4%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: rotate(180deg);
+    margin: 0;
+    pointer-events: none;
+}
+
+/** MEDIA @ MEDIA **/
+
+/** DESKTOP VIEW **/
+
+@media (min-width: 1025px) {
+
+    .nav-drawer {
+        position: static;
+        height: auto;
+        background: none;
+        color: inherit;
+        flex-direction: row;
+        width: auto;
+        justify-content: flex-end;
+        gap: 1rem;
+        transition: none;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+}
+
+/** TABLET VIEW **/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    header {
+        padding-top: 3rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .logo-white {
+        width: 100px;
+        height: 100px;
+    }
+
+    .search-bar input {
+        width: 250px;
+        height: 60px;
+    }
+
+    .search-bar button, .search-bar input {
+        font-size: 2rem;
+    }
+
+    .menu-icon {
+        font-size: 3rem;
+    }
+
+    .nav_links {
+        gap: 1rem;
+    }
+
+    .nav-drawer .nav_links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-drawer .nav_links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 3rem;
+        transition: color 0.3s ease;
+        gap: 20px;
+    }
+
+    .account {
+        font-size: 3rem;
+    }
+
+    .nav-drawer .nav_links li a:hover {
+        color: #056839;
+    }
+
+    .dropdown:active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content li a {
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-center {
+        display:flex;
+        justify-content: center;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 3rem;
+        right: 5.2rem;
+        font-size: 2.2rem;
+        cursor: pointer;
+    }
+
+    /** SEARCH SECTION **/
+
+    .search {
+        padding-top: 2rem;
+    }
+
+    .search-content p {
+        margin-bottom: 0rem;
+    }
+
+    /** FOOTER **/
+
+    .logo {
+    padding-top: 0rem;
+    }
+
+    /** LAST SECTION's BOTTOM **/
+
+    .rip-top {
+        top: 0%;
+    }
+
+    .rip-bot {
+        bottom: -1.5%;
+    }
+    
+}
+
+/** MOBILE VIEW **/
+
+@media (max-width: 767px) {
+
+    /** NAVIGATION BAR **/
+
+    header {
+        padding-top: 2rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .search-bar input {
+        width: 100px;
+    }
+
+    .nav_links {
+        gap: 1rem;
+    }
+
+    .nav-drawer .nav_links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-drawer .nav_links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        gap: 20px;
+    }
+
+    .account {
+        font-size: 1.5rem;
+    }
+
+    .nav-drawer .nav_links li a:hover {
+        color: #056839;
+    }
+
+    .dropdown:active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content li a {
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-center {
+        display:flex;
+        justify-content: center;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 3.5rem;
+        right: 2.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+    .nav_links i {
+        font-size: 3vh;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav_links .account {
+        padding: 9px 15px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .search-content .heading, .featured-content .heading, .reviews-content .heading {
+        font-size: 2.5rem;
+        padding: 0 2rem;
+    }
+
+    .search-content .subtext, .featured-content .subtext, .reviews-content .subtext {
+        font-size: 1rem;
+        padding: 0 2rem;
+    }
+
+    /** SEARCH SECTION **/
+
+    .search {
+        padding-top: 2rem;
+    }
+
+    .search-content p {
+        margin-bottom: 0rem;
+    }
+
+    /** FOOTER **/
+
+    .logo {
+    padding-top: 0rem;
+    }
+
+    /** LAST SECTION's BOTTOM **/
+
+    .rip-top {
+        top: 0.5%;
+    }
+
+    .rip-bot {
+        bottom: -0.5%;
+    }
+
+}
