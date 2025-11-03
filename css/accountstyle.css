@@ -552,17 +552,7 @@ footer {
 }
 
 /** SECTION DESIGN **/
-
-.hill-top {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: -4px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.hill-top {
+.folder-top {
     display: block;
     width: 100%;
     height: auto;
@@ -572,7 +562,7 @@ footer {
     pointer-events: none;
 }
 
-.hill-bot {
+.folder-bot {
     display: block;
     width: 100%;
     height: auto;
