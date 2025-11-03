@@ -17,7 +17,7 @@
 body {
     background-image: 
         linear-gradient(to left, rgba(9, 128, 0, 0.4), rgba(95, 105, 21, 0.6)),
-        url(images/DSCF4977-1-1-e1737482415201.webp);
+        url('../images/DSCF4977-1-1-e1737482415201.webp');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
