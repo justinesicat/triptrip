@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triptrip | your travel destination guide</title>
+
+    <link rel="stylesheet" href="searchstyle.css">
+
+    <!-- Outside References -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo-search">
+            <!-- triptrip Logo -->
+            <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="SEARCH ...">
+                <button onclick="location.href='#'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Hidden Checkbox for the HAMBURGER -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- HAMBURGER icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!-- Drawer for Navigation Drawer -->
+        <label for="menu-toggle" class="overlay"></label>
+
+        <!-- Drawer -->
+        <nav class="nav-drawer">
+            <!-- Close for Navigation Drawer -->
+            <label for="menu-toggle" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- Navigation Links -->
+            <ul class="nav_links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+
+            <!-- Dropdown Link -->
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-map"></i> TRIPS</a>
+                <div class="dropdown-center">
+                    <ul class="dropdown-content">
+                        <li><a href="#">FEATURED TRIPS</a></li>
+                        <li><a href="#">USER REVIEWS</a></li>
+                </ul>
+                </div>
+            </li>
+
+            <li><a href="#"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            <li><a href="#"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search">
+            <img class="rip-top" src="images/sectiontop/riptop.webp" alt="">
+
+            <div class="search-content">
+            <p class="heading">search results</p>
+            <p class="subtext">you are looking for "<b><span id="search-query">Philippines</span></b>"</p>
+
+            <div class="filters-section">
+                <div class="filters-header">
+                    <div class="filters-title">
+                        <i class="fa fa-filter"></i> filters
+                    </div>
+                    <div class="filters-buttons">
+                        <button class="clear-filters" onclick="">Clear All</button>
+                        <button class="apply-filters" onclick="">Apply</button>
+                    </div>
+                </div>
+
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label class="filter-label">Destination</label>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="beach" value="beach" name="trip-destination">
+                                <label for="beach">Beach</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="nature" value="nature" name="trip-destination">
+                                <label for="nature">Nature</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="city" value="city" name="trip-destination">
+                                <label for="city">City</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="heritage" value="heritage" name="trip-destination">
+                                <label for="heritage">Heritage</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Trip Type</label>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="adventure" value="adventure" name="trip-type">
+                                <label for="adventure">Adventure</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="leisure" value="leisure" name="trip-type">
+                                <label for="leisure">Leisure</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cultural" value="cultural" name="trip-type">
+                                <label for="cultural">Cultural</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Location</label>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="radio" name="location" id="all-locations" value="all" checked>
+                                <label for="all-locations">All Destinations</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="location" id="local" value="local">
+                                <label for="local">Local (Philippines)</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="location" id="international" value="international">
+                                <label for="international">International</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Price Range (₱)</label>
+                        <div class="budget-container">
+                            <input type="range" id="price-range" name="budget" min="1000" max="100000" step="1000" value="50000">
+                            <span class="budget-value" id="price-value">₱&nbsp;50,000</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Sort By Price</label>
+                        <select class="filter-select" id="price-sort">
+                            <option value="none">No Sorting</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">User Reviews</label>
+                        <select class="filter-select" id="review-filter" name="review-filter">
+                            <option value="all">All Ratings</option>
+                            <option value="10">10 ★</option>
+                            <option value="7-9">7 to 9 ★</option>
+                            <option value="4-6">4 to 6 ★</option>
+                            <option value="1-3">1 to 3 ★</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-container">
+
+                <div class="result-card" data-destination="beach" data-type="leisure" data-location="local" data-price="3500" data-rating="8.4">
+                    <img src="https://res.klook.com/image/upload/fl_lossy.progressive/q_auto/c_fill,w_750/blogen/2018/10/33cfb02a-%E7%A7%81%E4%BA%BA%E5%AF%BC%E8%A7%88%E6%B5%B7%E4%B8%8A%E8%B7%B3%E5%B2%9B%E6%B8%B8.jpg" alt="Boracay Island">
+                    <div class="result-info">
+                        <h3>Boracay Island</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★★★★</span>
+                            <span class="rating-text"><b>8.4</b> (2,543)</span>
+                        </div>
+                        <p>Famous for its white sand beaches, vibrant nightlife, and crystal-clear waters — a must-visit tropical paradise in Aklan.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card" data-destination="beach" data-type="leisure" data-location="local" data-price="4200" data-rating="9.1">
+                    <img src="https://mediaim.expedia.com/destination/1/dcc4b5ab1c594fa368c2c71f52313040.jpg" alt="Palawan">
+                    <div class="result-info">
+                        <h3>El Nido, Palawan</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★★★★★</span>
+                            <span class="rating-text"><b>9.1</b> (3,821)</span>
+                        </div>
+                        <p>Experience limestone cliffs and turquoise lagoons in one of the most breathtaking islands in the Philippines.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card" data-destination="mountain" data-type="cultural" data-location="local" data-price="2800" data-rating="6.9">
+                    <img src="https://images.pexels.com/photos/12914725/pexels-photo-12914725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Baguio City">
+                    <div class="result-info">
+                        <h3>Baguio City</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★★</span>
+                            <span class="rating-text"><b>6.9</b> (1,892)</span>
+                        </div>
+                        <p>The City of Pines — known for its cool weather, scenic mountain views, and cozy coffee shops.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card" data-destination="heritage" data-type="cultural" data-location="local" data-price="3100" data-rating="7.3">
+                    <img src="https://www.beyondmydoor.com/wp-content/uploads/2024/03/Kalesa-Ride-Calle-Crisologo%E2%80%8B-Vigan-Philippines-1024x776.webp" alt="Vigan, Ilocos Sur">
+                    <div class="result-info">
+                        <h3>Vigan, Ilocos Sur</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★★★</span>
+                            <span class="rating-text"><b>7.3</b> (1,456)</span>
+                        </div>
+                        <p>A timeless glimpse of Spanish-era charm that glows beautifully at night.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card" data-destination="beach" data-type="adventure" data-location="local" data-price="5000" data-rating="8.6">
+                    <img src="https://thefroggyadventures.com/wp-content/uploads/2024/10/maasin-river-siargao-1080x720.jpg" alt="Siargao Island">
+                    <div class="result-info">
+                        <h3>Siargao Island</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★★★★</span>
+                            <span class="rating-text"><b>8.6</b> (2,107)</span>
+                        </div>
+                        <p>Surf the waves, dive into rock pools, or relax under swaying palms. 
+                        A paradise for surfers, adventurers, and dreamers alike.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="result-card" data-destination="mountain" data-type="cultural" data-location="local" data-price="2500" data-rating="7.9">
+                    <img src="https://www.vacationhive.com/images/hives/11/11-banaue-terraces-main-img-new.jpg" alt="Banaue Rice Terraces">
+                    <div class="result-info">
+                        <h3>Banaue Rice Terraces</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★★★</span>
+                            <span class="rating-text"><b>7.9</b> (987)</span>
+                        </div>
+                        <p> A breathtaking 2,000-year-old masterpiece that connects travelers with heritage and nature.</p>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            
+            <!-- for No Results-->
+            <div class="no-results">
+                <div class="no-results-icon"><i class="fa fa-search-minus"></i></div>
+                    <h4>no destinations found</h4>
+                    <p>We couldn't find any destinations matching your search.</p>
+                    <p>Try adjusting your search criteria or clearing some filters.</p>
+                </div>
+            </div>
+
+            <img class="rip-bot" src="images/sectiontop/riptop.webp" alt="">
+        </section>
+    </main>
+
+    
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="images/triptripLOGO.png" alt="logo">
+
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 triptrip. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
