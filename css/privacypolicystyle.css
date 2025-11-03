@@ -222,7 +222,7 @@ header {
 
 /** ACCOUNT SECTION **/
 
-.youraccount-section {
+.privacypolicyheading-section {
     z-index: 1;
     position: relative;
     overflow: visible;
@@ -230,7 +230,7 @@ header {
     margin: 0;
 }
 
-.youraccount-content {
+.privacypolicyheading-content {
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -241,7 +241,7 @@ header {
     z-index: 1;
 }
 
-.account-section {
+.policy-section {
     z-index: 1;
     position: relative;
     overflow: visible;
@@ -249,7 +249,7 @@ header {
     margin: 0;
 }
 
-.account-content {
+.policy-content {
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -262,7 +262,7 @@ header {
     z-index: 1;
 }
 
-.account-content .heading {
+.policy-content .heading {
     font-size: 3rem;
     font-family: Elephant;
     margin-bottom: 1rem;
@@ -270,13 +270,13 @@ header {
     text-shadow: 0 0 1px black;
 }
 
-.account-content p {
+.policy-content p {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
-.youraccount-content .heading {
+.privacypolicyheading-content .heading {
     display: flex;
     justify-content: center;
     text-align: start;
@@ -301,7 +301,7 @@ header {
     100% { text-shadow: 3px 0 8px white; }
 }
 
-.youraccount-content p {
+.privacypolicyheading-content p {
     text-align: center;
     font-size: 1.25vw;
     color: white;
@@ -310,171 +310,33 @@ header {
     padding-top: 20px;
 }
 
-/* Profile Card */
+.policy-text {
+    padding: 0rem 5rem;
+}
 
-.profile-container {
+.policy-text ul li {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.policy-text section {
+    margin: 2.5rem 0rem;
+}
+
+.policy-text .email {
+    color:#222
+}
+
+.centerlist {
     display: flex;
     justify-content: center;
-    padding: 2rem 0rem;
-}
-
-.profile-top {
-    display:flex;
-    justify-content: space-between;
-    background-color: #F7941D;
-    padding: 0rem 1rem;
-}
-
-.license-logo {
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-    padding: 1rem;
-    filter: brightness(0) invert(1);
-}
-
-.profile-card {
-    background: #ffffff;
-    border-radius: 12px;
-    max-width: 650px;
     width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border: 1px solid #ccc;
-    overflow: hidden;
 }
 
-/* Title/Header */
-.profile-title {
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 1.2rem;
-}
-
-/* Main Body*/
-.profile-body {
-    display: flex;
-    padding: 1.5rem;
-    gap: 2rem;
-}
-
-/* Profile Photo */
-.profile-photo img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #aaa;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Profile Info */
-.profile-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.77rem;
-}
-
-.profile-info p {
-    margin: 0;
-    color: #222;
-    line-height: 1.1;
-}
-
-.profile-info strong {
-    width: 70px;
-    color: #555;
-}
-
-/* Buttons */
-.edit-btn {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background: #F7941D;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.95rem;
-}
-
-.edit-btn:hover {
-    background: #e6850d;
-}
-
-/* Inline form */
-.edit-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background: #ffffff;
-    padding: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    margin-top: 1rem;
-    margin-left: -172px;
-}
-
-.edit-form label {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #333;
-    font-family: bebas neue;
-}
-
-.edit-form input {
-    margin-top: 0.2rem;
-    padding: 0.4rem 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    
-}
-
-.edit-form select {
-    padding: 0.4rem 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    color: #333;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Form buttons */
-.form-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.form-buttons button {
-
-    padding: 0.6rem 1.2rem;
-    font-size: 0.95rem;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    background: #F7941D;
-    color: #fff;
-}
-
-.form-buttons button[type="reset"] {
-    background: #dc3545;
-}
-
-.form-buttons button:hover {
-    opacity: 0.9;
+.centerlist ul {
+    max-width: 1000px;
 }
 
 /** FOOTER **/
@@ -562,7 +424,7 @@ footer {
     pointer-events: none;
 }
 
-.hill-top {
+.edgecurve-top {
     display: block;
     width: 100%;
     height: auto;
@@ -572,7 +434,7 @@ footer {
     pointer-events: none;
 }
 
-.hill-bot {
+.edgecurve-bot {
     display: block;
     width: 100%;
     height: auto;
@@ -694,26 +556,30 @@ footer {
         cursor: pointer;
     }
 
-    /** ACCOUNT SECTION **/
+    /** PRIVACY POLICY SECTION **/
 
-    .youraccount-content {
+    .privacypolicyheading-content-content {
         padding-bottom: 8rem;
-    }W
+    }
 
-    .youraccount-section, .account-section {
+    .privacypolicyheading-content, .policy-section {
         padding-top: 2rem;
     }
 
-    .youraccount-section p, .account-content p {
+    .privacypolicyheading-section p, .account-content p {
         margin-bottom: 0rem;
     }
 
-    .youraccount-section p {
+    .privacypolicyheading-content p {
         font-size: 1.60rem;
     }
 
-    .youraccount-section .heading {
+    .privacypolicyheading-content .heading {
         font-size: 5.5rem;
+    }
+
+    .policy-text {
+        padding: 0rem 3rem;
     }
 
     /** FOOTER **/
@@ -811,76 +677,54 @@ footer {
         background-color: rgb(255, 255, 255);
     }
 
-    .account-content .heading, .account-content-top .heading {
-        font-size: 2.5rem;
-        padding: 0 2rem;
-    }
+    /** PRIVACY POLICY SECTION **/
 
-    .account-content .subtext, .account-content-top .subtext {
-        font-size: 1rem;
-        padding: 0 2rem;
-    }
-
-    /** ACCOUNT SECTION **/
-
-    .youraccount-content {
+    .privacypolicyheading-content {
         padding: 0rem 0%;
         padding-bottom: 6rem;
     }
 
-    .youraccount-section {
+    .privacypolicyheading-section {
         padding-bottom: 2rem;
     }
 
-    .youraccount-section .heading, .youraccount-section p, .account-content .heading {
-        padding: 0rem 50px;
+    .privacypolicyheading-section .heading, .privacypolicyheading-section p, .policy-content .heading {
+        padding: 0rem 30px;
     }
 
-    .youraccount-section p {
+    .privacypolicyheading-section .subtext {
         font-size: 4vw;
     }
 
-    .youraccount-section .heading {
+    .privacypolicyheading-section .heading {
         font-size: 15vw;
         text-align: center;
     }
 
-    /** PROFILE INFORMATION **/
-    
-    .profile-card {
-     transform: scale(0.8);
+    .privacypolicyheading-content .heading {
+        font-size: 2.5rem;
+        padding: 0 2rem;
     }
 
-    .profile-container {
-        padding: 0rem;
+    .policy-content .heading {
+        font-size: 2rem;
     }
 
-    .profile-photo img {
-        width: 100px;
-        height: 100px;
+    .privacypolicyheading-content .subtext, .policy-content .subtext {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
-    .profile-info p {
-        font-size: 0.8rem;
+    .policy-text {
+        padding: 0rem 2rem;
     }
 
-    .profile-body {
-        display: flex;
-        padding: 0.8rem;
-        gap: 2rem;
+    .policy-content p {
+        font-size: 1rem;
     }
 
-    .profile-info {
-        gap: 0.62rem;
-    }
-
-    .edit-form {
-        margin-left: -132px;
-    }
-
-    .edit-btn, .form-buttons button {
-        font-size: 0.9rem;
-        padding: 0.3rem 0.6rem;
+    .policy-text ul li {
+        font-size: 1rem;
     }
 
     /** FOOTER **/
