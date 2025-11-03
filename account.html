@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triptrip | your travel destination guide</title>
+
+    <link rel="stylesheet" href="css/accountstyle.css">
+
+    <!-- Outside References -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo-search">
+            <!-- triptrip Logo -->
+            <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="SEARCH ...">
+                <button onclick="location.href='search.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Hidden Checkbox for the HAMBURGER -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- HAMBURGER icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!-- Drawer for Navigation Drawer -->
+        <label for="menu-toggle" class="overlay"></label>
+
+        <!-- Drawer -->
+        <nav class="nav-drawer">
+            <!-- Close for Navigation Drawer -->
+            <label for="menu-toggle" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- Navigation Links -->
+            <ul class="nav_links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+
+            <!-- Dropdown Link -->
+            <li class="dropdown">
+                <a><i class="fa-solid fa-map"></i> TRIPS</a>
+                <div class="dropdown-center">
+                    <ul class="dropdown-content">
+                        <li><a href="featured.html">FEATURED TRIPS</a></li>
+                        <li><a href="userreviews.html">USER REVIEWS</a></li>
+                </ul>
+                </div>
+            </li>
+
+            <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            <li><a href="account.html"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="youraccount-section">
+            <img class="circ-top" src="images/sectiontop/circtop.webp" alt="">
+
+            <div class="youraccount-content">
+                <p class="heading">your account</p>
+                <p class="subtext">manage your profile in one place.</p>
+            </div>
+        </section>
+
+        <section class="account-section">
+            <img class="rip-top" src="images/sectiontop/riptop.webp" alt="">
+
+            <div class="account-content">
+                <section class="account-section profile-section">
+                    <p class="heading">profile information</p>
+
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-top">
+                            <img class="license-logo" src="images/triptripLOGO.png" alt="logo">
+                            <p class="profile-title">triptrip's License</p>
+                        </div>
+                        
+
+                        <div class="profile-body">
+                            <div class="profile-photo">
+                                <img src="images/29-05-13_paper06.jpg" alt="Profile Picture">
+                            </div>
+
+                            <div class="profile-info">
+                                <p><strong>Name:</strong> <span id="display-name">Juan Dela Cruz</span></p>
+                                <p><strong>Email:</strong> <span id="display-email">juandelacruz@gmail.com</span></p>
+                                <p><strong>Country:</strong> <span id="display-country">Philippines</span></p>
+                                
+                                <button id="edit-btn" class="edit-btn">Edit Profile</button>
+
+                                <!-- Inline edit form (hidden by default) -->
+                                <form class="edit-form">
+                                    <label class="profilename">
+                                        Name:
+                                        <input type="text" name="name" value="Juan Dela Cruz">
+                                    </label>
+                                    <label class="profileemail">
+                                        Email:
+                                        <input type="email" name="email" value="juandelacruz@gmail.com">
+                                    </label>
+                                    <label class="profilepassword">
+                                        Password:
+                                        <input type="password" name="password" value="tondomanila">
+                                    </label>
+                                    <label>
+                                        Country:
+                                        <select name="country">
+                                            <option value="">SELECT A COUNTRY</option>
+                                            <option value="PH" selected>Philippines</option>
+                                            <option value="US">United States</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="JP">Japan</option>
+                                        </select>
+                                    </label>
+                                    <label class="change-photo-btn">
+                                        Change Photo
+                                        <input type="file" accept="image/*">
+                                    </label>
+                                    <div class="form-buttons">
+                                        <button type="submit">Save</button>
+                                        <button type="reset">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="rip-bot" src="images/sectiontop/riptop.webp" alt="">
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="images/triptripLOGO.png" alt="logo">
+
+            <div class="footer-links">
+                <a href="about.html" title="About">About</a>
+                <a href="contact.html" title="Contact">Contact</a>
+                <a href="privacypolicy.html" title="Privacy Policy">Privacy Policy</a>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.facebook.com/triptrip" target="_blank" title="triptrip's Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/triptrip" target="_blank" title="triptrip's Instagram Page"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.x.com/triptrip" target="_blank" title="triptrip's X / Twitter Page"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.tiktok.com/@triptrip" target="_blank" title="triptrip's TikTok Page"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 triptrip. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
