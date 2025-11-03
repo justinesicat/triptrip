@@ -220,9 +220,9 @@ header {
     cursor: pointer;
 }
 
-/** SEARCH **/
+/** ACCOUNT SECTION **/
 
-.search-section {
+.account-section {
     z-index: 1;
     position: relative;
     overflow: visible;
@@ -230,7 +230,15 @@ header {
     margin: 0;
 }
 
-.search-content {
+.youraccount-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
+}
+
+.account-content {
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -243,11 +251,20 @@ header {
     z-index: 1;
 }
 
-.search-content {
-    font-size: 3rem;
+.youraccount-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-bottom: -5rem;
+    padding: 3rem 0%;
+    padding-bottom: 10rem;
+    position: relative;
+    background-color: rgb(196, 187, 159);
+    overflow: visible;
+    z-index: 1;
 }
 
-.search-content .heading {
+.account-content .heading {
     font-size: 3rem;
     font-family: Elephant;
     margin-bottom: 1rem;
@@ -255,411 +272,192 @@ header {
     text-shadow: 0 0 1px black;
 }
 
-.search-content p {
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 3rem;
-    color: #6b5e50;
-    line-height: 1.6;
-}
-
-/* Filters */
-
-.filters-section {
-    background: #fffdf8;
-    border: 2px solid #e2d6c5;
-    padding: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-.filters-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../images/29-05-13_paper06.jpg');
-    background-size: cover;
-    background-blend-mode: multiply;
-    opacity: 0.4;
-    z-index: 0;
-}
-
-.filters-section * {
-    position: relative;
-    z-index: 1;
-}
-
-.filters-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.filters-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #3a3520;
-    font-family: "Bebas Neue", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.filters-title i{
-    font-size: 20px;
-}
-
-.clear-filters {
-    background: #5a4a3f;
-    border: none;
-    color: white;
-    font-size: 0.95rem;
-    font-family: "Bebas Neue", sans-serif;
-    cursor: pointer;
-    padding: 8px 20px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.clear-filters:hover {
-    background-color: #b89129;
-}
-
-.apply-filters {
-    background: #5a4a3f;
-    border: none;
-    color: white;
-    font-size: 0.95rem;
-    font-family: "Bebas Neue", sans-serif;
-    cursor: pointer;
-    padding: 8px 20px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.apply-filters:hover {
-    background-color: #b89129;
-}
-
-.clear-filters,
-.apply-filters {
-    margin-top: -15px;
-    line-height: 1;
-    vertical-align: middle;
-}
-
-.filters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-}
-
-.filter-group {
-    background: rgba(255, 253, 248, 0.8);
-    padding: 1rem;
-    border-radius: 6px;
-    border: 1px solid #e2d6c5;
-}
-
-.filter-label {
-    font-weight: 700;
-    color: #3a3520;
-    margin-bottom: 10px;
-    display: block;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.filter-options {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.filter-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 4px;
-}
-
-.filter-option:hover {
-    background: rgba(226, 214, 197, 0.3);
-}
-
-.filter-option input[type="checkbox"],
-.filter-option input[type="radio"] {
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    accent-color: #5a4a3f;
-}
-
-.filter-option label {
-    cursor: pointer;
-    color: #5a4a3f;
-    font-size: 0.95rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-select.filter-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #e2d6c5;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    color: #5a4a3f;
-    background: white;
-    cursor: pointer;
-    transition: border-color 0.3s;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-select.filter-select:focus {
-    outline: none;
-    border-color: #5a4a3f;
-}
-
-.budget-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.budget-value {
-    font-size: 1.5rem;
+.youraccount-content .heading {
+    font-size: 3rem;
     font-family: Elephant;
-    color: #5a4a3f;
+    margin-bottom: 1rem;
+    color: #3a3520;
     text-shadow: 0 0 1px black;
 }
 
-/* Input Range Design */
-input[type=range] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    margin: 18px 0;
-    width: 100%;
-}
-
-input[type=range]:focus {
-    outline: none;
-}
-
-/* for Firefox */
-input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    background: #5a4a3f;
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-
-input[type=range]::-moz-range-thumb {
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 2px solid #000000;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    cursor: pointer;
-}
-
-/* for Chrome, Edge, Safari */
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    background: #5a4a3f;
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    margin-top: -8px;
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 2px solid #000000;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    cursor: pointer;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #b89129;
-}
-
-/* RESULTS */
-
-.results-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-    margin-top: 3rem;
-    padding: 2rem;
-}
-
-/* Card Layout */
-.result-card {
-    background: #fffdf8;
-    border: 2px solid #e2d6c5;
-    border-radius: 8px;
-    width: 300px;
-    height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-/* Image styling */
-.result-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 2px solid #e2d6c5;
-    flex-shrink: 0;
-}
-
-/* Text container */
-.result-info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-}
-
-/* Title */
-.result-info h3 {
-    font-family: "Southwell", cursive;
-    font-size: 1.8rem;
-    color: #3a3520;
-    margin: 0 0 0.2rem 0;
-    text-align: center;
-    line-height: 1.2;
-    min-height: 2.4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Description */
-.result-info p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    color: #5a4a3f;
-    line-height: 1.4;
-    flex-grow: 1;
-    margin: 0;
-}
-
-/* Ratings */
-.rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.rating .stars {
-    color: #b89129;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    margin-top: -5px;
-}
-
-.rating .rating-text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    color: #5a4a3f;
-}
-
-/* View Details button */
-.view-btn {
-    background-color: #5a4a3f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    font-family: "Bebas Neue", sans-serif;
-    text-align: center;
-    display: block;
-    width: fit-content;
-    margin: 0 auto 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.view-btn:hover {
-    background-color: #b89129;
-}
-
-.result-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        url('../images/29-05-13_paper06.jpg') center/cover no-repeat,
-        rgba(255, 255, 255, 0.95);
-    background-blend-mode: multiply;
-    opacity: 0.6;
-    z-index: 0;
-}
-
-.result-card * {
-    position: relative;
-    z-index: 1;
-}
-
-/* No Results */
-
-.no-results {
-    display: none;
-    text-align: center;
-    padding: 3rem 2rem;
-    color: #6b5e50;
+.youraccount-content p {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fffdf8;
-    border: 2px solid #e2d6c5;
-    border-radius: 8px;
-    margin: 2rem auto;
-    max-width: 600px;
+    color: #5a4a3f;
+    line-height: 1.6;
 }
 
-.no-results h4 {
-    font-family: Elephant;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    margin: 1rem;
+.account-content p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Profile Card */
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.profile-top {
+    display:flex;
+    justify-content: space-between;
+    background-color: #F7941D;
+    padding: 0rem 1rem;
+}
+
+.license-logo {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+    filter: brightness(0) invert(1);
+}
+
+.profile-card {
+    background: #ffffff;
+    border-radius: 12px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+/* Title/Header */
+.profile-title {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Main Body*/
+.profile-body {
+    display: flex;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+/* Profile Photo */
+.profile-photo img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Profile Info */
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.77rem;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #222;
+    line-height: 1.1;
+}
+
+.profile-info strong {
+    width: 70px;
+    color: #555;
+}
+
+/* Buttons */
+.edit-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #F7941D;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.edit-btn:hover {
+    background: #e6850d;
+}
+
+/* Inline form */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+    margin-left: -172px;
+}
+
+.edit-form label {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #333;
+    font-family: bebas neue;
+}
+
+.edit-form input {
+    margin-top: 0.2rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    
+}
+
+.edit-form select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    width: 100%; /* optional: match input width */
+    box-sizing: border-box;
+}
+
+/* Form buttons */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.form-buttons button {
+
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: #F7941D;
+    color: #fff;
+}
+
+.form-buttons button[type="reset"] {
+    background: #dc3545;
+}
+
+.form-buttons button:hover {
+    opacity: 0.9;
 }
 
 /** FOOTER **/
@@ -737,6 +535,15 @@ footer {
 }
 
 /** SECTION DESIGN **/
+
+.circ-top {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: -4px;
+    z-index: 2;
+    pointer-events: none;
+}
 
 .rip-top {
     display: block;
@@ -870,13 +677,17 @@ footer {
         cursor: pointer;
     }
 
-    /** SEARCH SECTION **/
+    /** ACCOUNT SECTION **/
 
-    .search-section {
+    .youraccount-content {
+        padding-bottom: 8rem;
+    }W
+
+    .youraccount-section, .account-section {
         padding-top: 2rem;
     }
 
-    .search-content p {
+    .youraccount-section p, .account-content p {
         margin-bottom: 0rem;
     }
 
@@ -885,6 +696,7 @@ footer {
     .logo {
     padding-top: 0rem;
     }
+    
 }
 
 /** MOBILE VIEW **/
@@ -974,24 +786,66 @@ footer {
         background-color: rgb(255, 255, 255);
     }
 
-    .search-content .heading, .featured-content .heading, .reviews-content .heading {
+    .account-content .heading, .account-content-top .heading {
         font-size: 2.5rem;
         padding: 0 2rem;
     }
 
-    .search-content .subtext, .featured-content .subtext, .reviews-content .subtext {
+    .account-content .subtext, .account-content-top .subtext {
         font-size: 1rem;
         padding: 0 2rem;
     }
 
-    /** SEARCH SECTION **/
+    /** ACCOUNT SECTION **/
 
-    .search-section {
+    .youraccount-content {
+        padding-bottom: 6rem;
+    }
+
+    .youraccount-section, .account-section {
         padding-top: 2rem;
     }
 
-    .search-content p {
-        margin-bottom: 0rem;
+    .youraccount-section .heading, .youraccount-section p, .account-content .heading {
+        padding: 0rem 50px;
+    }
+
+    /** PROFILE INFORMATION **/
+    
+    .profile-card {
+     transform: scale(0.8);
+    }
+
+    .profile-container {
+        padding: 0rem;
+    }
+
+    .profile-photo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info p {
+        font-size: 0.8rem;
+    }
+
+    .profile-body {
+        display: flex;
+        padding: 0.8rem;
+        gap: 2rem;
+    }
+
+    .profile-info {
+        gap: 0.62rem;
+    }
+
+    .edit-form {
+        margin-left: -132px;
+    }
+
+    .edit-btn, .form-buttons button {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
     }
 
     /** FOOTER **/
@@ -999,4 +853,5 @@ footer {
     .logo {
     padding-top: 0rem;
     }
+
 }
