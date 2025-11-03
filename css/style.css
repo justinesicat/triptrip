@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Southwell';
-  src: url('font/Southwell.ttf') format('truetype');
+  src: url('../font/Southwell.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Medicine';
-  src: url('font/MEDICINE SHOW CAPS.ttf') format('truetype');
+  src: url('../font/MEDICINE\ SHOW\ CAPS.ttf') format('truetype');
 }
 
 * {
@@ -45,6 +45,7 @@ header {
 .logo-white {
     height: 50px;
     width: auto;
+    pointer-events: none;
 }
 
 .search-bar {
@@ -128,6 +129,7 @@ header {
     height: 80px;
     padding: 0.5rem;
     filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+    pointer-events: none;
 }
 
 .logo-white {
@@ -811,6 +813,7 @@ footer {
     justify-content: center;
     width: 100%;
     margin: 0;
+    margin-top: -8rem;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
@@ -823,6 +826,7 @@ footer {
     align-items: center;
     gap: 2rem;
     padding: 3rem 0;
+    margin-top: 2rem;
     width: 100%;
 }
 
@@ -882,6 +886,8 @@ footer {
     width: 100%;
     height: auto;
     margin-bottom: -4px;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .news-bot {
@@ -891,6 +897,8 @@ footer {
     margin-bottom: -100px;
     margin-top: 0px;
     transform: rotate(180deg);
+    z-index: 2;
+    pointer-events: none;
 }
 
 .circ-top {
@@ -898,13 +906,16 @@ footer {
     width: 100%;
     height: auto;
     margin-bottom: -4px;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .rip-top {
     display: block;
     width: 100%;
     height: auto;
-    margin-bottom: -4px;
+    margin-bottom: -1px;
+    pointer-events: none;
 }
 
 /** MEDIA @ MEDIA **/
@@ -1049,6 +1060,12 @@ footer {
   
     .gallery-container {
         justify-content: flex-start;
+    }
+
+    /** FOOTER **/
+
+    footer {    
+    margin-top: -10rem;
     }
 
     /** LAST SECTION's BOTTOM **/
@@ -1250,6 +1267,12 @@ footer {
     .stamp-container::before, .stamp-container::after {
         width: 50px;
         height: 85%;
+    }
+
+    /** FOOTER **/
+
+    footer {    
+    margin-top: -9rem;
     }
 
     /** LAST SECTION's BOTTOM **/
