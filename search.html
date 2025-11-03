@@ -25,7 +25,7 @@
             <!-- Search Bar -->
             <div class="search-bar">
                 <input type="text" placeholder="SEARCH ...">
-                <button onclick="location.href='#'"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button onclick="location.href='search.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
 
@@ -77,18 +77,19 @@
             <p class="heading">search results</p>
             <p class="subtext">you are looking for "<b><span id="search-query">Philippines</span></b>"</p>
 
-            <div class="filters-section">
+            <form class="filters-section" action="search.html" method="GET">
                 <div class="filters-header">
                     <div class="filters-title">
                         <i class="fa fa-filter"></i> filters
                     </div>
                     <div class="filters-buttons">
-                        <button class="clear-filters" onclick="">Clear All</button>
-                        <button class="apply-filters" onclick="">Apply</button>
+                        <button type="reset" class="clear-filters">Clear All</button>
+                        <button type="submit" class="apply-filters">Apply</button>
                     </div>
                 </div>
 
                 <div class="filters-grid">
+                    <!-- Destination checkboxes -->
                     <div class="filter-group">
                         <label class="filter-label">Destination</label>
                         <div class="filter-options">
@@ -111,6 +112,7 @@
                         </div>
                     </div>
 
+                    <!-- Trip Type checkboxes -->
                     <div class="filter-group">
                         <label class="filter-label">Trip Type</label>
                         <div class="filter-options">
@@ -129,6 +131,7 @@
                         </div>
                     </div>
 
+                    <!-- Location radios -->
                     <div class="filter-group">
                         <label class="filter-label">Location</label>
                         <div class="filter-options">
@@ -147,6 +150,7 @@
                         </div>
                     </div>
 
+                    <!-- Budget slider -->
                     <div class="filter-group">
                         <label class="filter-label">Price Range (₱)</label>
                         <div class="budget-container">
@@ -155,9 +159,10 @@
                         </div>
                     </div>
 
+                    <!-- Sort and reviews -->
                     <div class="filter-group">
                         <label class="filter-label">Sort By Price</label>
-                        <select class="filter-select" id="price-sort">
+                        <select class="filter-select" id="price-sort" name="price-sort">
                             <option value="none">No Sorting</option>
                             <option value="low-high">Price: Low to High</option>
                             <option value="high-low">Price: High to Low</option>
@@ -175,7 +180,7 @@
                         </select>
                     </div>
                 </div>
-            </div>
+            </form>
 
             <div class="results-container">
 
@@ -270,23 +275,22 @@
             <img class="rip-bot" src="images/sectiontop/riptop.webp" alt="">
         </section>
     </main>
-
     
     <footer>
         <div class="footer-content">
             <img class="logo" src="images/triptripLOGO.png" alt="logo">
 
             <div class="footer-links">
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
+                <a href="about.html" title="About">About</a>
+                <a href="contact.html" title="Contact">Contact</a>
+                <a href="privacypolicy.html" title="Privacy Policy">Privacy Policy</a>
             </div>
 
             <div class="socials">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" title="triptrip's Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" title="triptrip's Instagram Page"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" title="triptrip's X / Twitter Page"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" title="triptrip's TikTok Page"><i class="fa-brands fa-tiktok"></i></a>
             </div>
         </div>
 
