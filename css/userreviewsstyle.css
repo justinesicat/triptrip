@@ -404,11 +404,9 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fffdf6;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 5rem;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    font-family: "Southwell", cursive;
+    font-size: 6rem;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.6);
     border-radius: 5px;
 }
 
@@ -1004,7 +1002,7 @@ footer {
     }
 
     .review-photo .photo-caption {
-        font-size: 4rem;
+        font-size: 5rem;
         white-space: nowrap;
     }
 
