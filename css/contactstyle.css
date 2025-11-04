@@ -470,15 +470,15 @@ footer {
 
 /** SECTION DESIGN **/
 
-.edgecurve-top,
-.edgecurve-bot {
+.mail-top,
+.mail-bot {
     display: block;
     width: 100%;
     height: auto;
     pointer-events: none;
 }
 
-.edgecurve-bot {
+.mail-bot {
     transform: rotate(180deg);
     margin-top: -2px;
 }
