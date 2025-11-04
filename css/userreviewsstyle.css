@@ -985,7 +985,7 @@ footer {
         padding-bottom: 8rem;
     }
 
-    .userreviewsheading-section p, .account-content p {
+    .userreviewsheading-section p {
         margin-bottom: 0rem;
     }
 
@@ -1064,10 +1064,6 @@ footer {
         font-size: 1.5rem;
         transition: color 0.3s ease;
         gap: 20px;
-    }
-
-    .account {
-        font-size: 1.5rem;
     }
 
     .nav-drawer .nav_links li a:hover {

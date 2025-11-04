@@ -220,7 +220,9 @@ header {
     cursor: pointer;
 }
 
-/** USER REVIEWS SECTION **/
+/** TRIP SECTION **/
+
+/* Title Section (Country Name with Subtext) */
 
 .heading-section {
     z-index: 1;
@@ -236,63 +238,11 @@ header {
     width: 100%;
     margin-bottom: -5rem;
     padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     position: relative;
     overflow: visible;
     z-index: 1;
-}
-
-.review-carousel {
-    z-index: 1;
-    position: relative;
-    overflow: visible;
-    text-align: center;
-    margin: 0;
-}
-
-.reviews-section {
-    z-index: 1;
-    position: relative;
-    overflow: visible;
-    text-align: center;
-    margin: 0;
-}
-
-.reviews-content {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    overflow: visible;
-    z-index: 1;
-}
-
-.carousel-content {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    margin-bottom: -5rem;
-    padding-bottom: 5rem;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    overflow: visible;
-    z-index: 1;
-}
-
-.reviews-content .heading {
-    font-size: 3rem;
-    font-family: Elephant;
-    margin-bottom: 1rem;
-    color: #2C2C2C;
-    text-shadow: 0 0 1px black;
-}
-
-.reviews-content p {
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
 }
 
 .heading-content .heading {
@@ -321,31 +271,139 @@ header {
 }
 
 .heading-content p {
-  text-align: center;
-  font-size: 1.25vw;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 0 0 5px black;
-  padding-top: 20px;
+    text-align: center;
+    font-size: 1.25vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 5px black;
+    padding-top: 20px;
 }
 
-.reviews-text {
-    padding: 0rem 5rem;
+/* First Section */
+
+.first-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
 }
 
-.reviews-text ul li {
+.first-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-bottom: -5rem;
+    padding-bottom: 8rem;
+    padding-top: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.first-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.first-content p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Middle Section */
+
+.general-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
+}
+
+.general-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-bottom: -5rem;
+    padding-bottom: 8rem;
+    padding-top: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.general-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.general-content h4,
+.general-content h5 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #2C2C2C;
+}
+
+.general-content h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    font-family: Southwell;
+}
+
+.general-content h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.general-content h5 {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.general-content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.general-text {
+    padding: 0rem 7rem;
+}
+
+.general-text ul li,
+.general-text ol li {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     line-height: 1.6;
+    margin: 0 0 1rem 1.5rem;
+    list-style-position: outside;
 }
 
-.reviews-text section {
+.general-text section {
     margin: 2.5rem 0rem;
 }
 
-.reviews-text .email {
-    color:#222
+.general-text article {
+    text-align: left;
+    line-height: 1.6;
 }
 
 .centerlist {
@@ -358,214 +416,97 @@ header {
     max-width: 1000px;
 }
 
-/* Stamp Design */
-
-.stamp-center {
-    display: flex;
-    justify-content: center;
-    width: 95.6%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.stamp-container {
-    display: flex;
-    justify-content:start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 50px 200px;
-}
-
-/* Fading Edges */
-.stamp-container::before, .stamp-container::after {
-    content: "";
-    position: absolute;
-    top: 5rem;
-    width: 300px;
-    height: 70%;
-    pointer-events: none;
-    z-index: 5;
-}
-
-.stamp-container::before {
-    left: 0;
-    background: linear-gradient(to right, #fff 10%, transparent);
-}
-
-.stamp-container::after {
-    right: 0;
-    background: linear-gradient(to left, #fff 10%, transparent);
-}
-
-.stamp {
-    scroll-snap-align: center;
-    flex: 0 0 auto;
-    position: relative;
-    display: inline-block;
-    width: auto;
-    height: 400px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.stamp:hover {
-    transform: translateY(-10px) rotate(-1deg);
-}
-
-.stampimg {
+/* Table Style */
+.schedule-table {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(1) contrast(1);
-}
-
-.stamp-photo {
-    position: absolute;
-    top: 14%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 65%;
-    height: 70%;
-    object-fit: cover;
-    z-index: 1;
-    border: 3px solid #e7e3d4;
-    box-shadow: 0 0 6px rgba(0,0,0,0.35);
-    filter: brightness(1.3);
-    opacity: 0.3;
-    mix-blend-mode: multiply;
-    transition: all 0.4s ease;
-}
-
-.stamp:hover .stamp-photo {
-    opacity: 0.55;
-    filter: brightness(1.5);
-}
-
-.stamp-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 4.5rem 0rem;
-    color: #2a2a2a;
-    font-family: 'Georgia', serif;
-    text-shadow: 0 1px 3px rgba(255,255,255,1);
-    z-index: 2;
-    transition: transform 0.3s ease;
-}
-
-.stamp:hover .stamp-inner {
-    transform: translateY(-3px);
-}
-
-.stamp-top {
+    max-width: 500px;
+    border-collapse: collapse;
+    margin: 3rem auto;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.stamp-rating {
-    font-family: Medicine;
-    font-size: 8rem;
-    color: #2f2f2f;
-    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.7), 0 3px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
-}
-
-.stamp-bottom {
-    font-size: 1rem;
     letter-spacing: 1px;
-    color: #1c1c1c;
-    z-index: 2;
+    color: #3b3b3b;
+    background: #fffdf8;
+    box-shadow: 5px 5px 0px #f0e0c0, 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0d59d;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
 }
 
-.rating-display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.5rem;
+.schedule-table th {
+    background-color: #F7941D;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    border-bottom: 2px dashed #f8c37a;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
 }
 
-.rating-display .stars {
-    color: #b89129;
-    font-size: 3rem;
-    letter-spacing: 2px;
-    margin-top: -5px;
+.schedule-table td {
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px dashed #f0d59d;
 }
 
-.rating-count, .rating-number {
+.schedule-table tr:nth-child(even) {
+    background-color: #fff9ef;
+}
+
+.schedule-table tr:hover {
+    background-color: #fff3e0;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-table td:first-child {
+    font-weight: 700;
+    color: #2b2b2b;
+    text-transform: uppercase;
+}
+
+.schedule-table td:nth-child(2) {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    color: #5a4a3f;
-    margin-top: 0.2rem;
+    color: #444;
 }
 
-.reviews-container {
-    padding: 5rem 0rem;
-}
+/** Last Section **/
 
-/* Scrollbar Design */
-
-/* For Firefox */
-.stamp-container {
-    scrollbar-width: thin;
-    scrollbar-color: #222222 #ffffff;
-}
-
-/* Chrome, Edge, Safari */
-.stamp-container::-webkit-scrollbar {
-    height: 10px;
-}
-
-.stamp-container::-webkit-scrollbar-track {
-    background: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
-}
-
-.stamp-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #222222, #222222);
-    border-radius: 20px;
-    border: 1px solid #ffffff;
-    box-shadow: inset 0 0 4px rgba(255,255,255,0.3);
-}
-
-.stamp-container::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #222222, #222222);
-}
-
-.stamp-container::-webkit-scrollbar-corner {
-    background: #ffffff;
-}
-
-.stamp-scroll-hint {
+.last-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
     text-align: center;
+    margin: 0;
+}
+
+.last-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding-bottom: 8rem;
+    padding-top: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.last-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.last-content p {
+    font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: #222222;
-    font-style: italic;
-    opacity: 0.7;
-    user-select: none;
-    padding-top: 2%;
+    color: #3e3e3e;
+    line-height: 1.6;
 }
-
-.review-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  max-width: 900px;
-  padding: 2rem;
-  border: 2px dashed #f7941d;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  background: #fffefb;
-}
-
 
 /** FOOTER **/
 
@@ -775,21 +716,14 @@ footer {
         cursor: pointer;
     }
 
-    /** USER REVIEWS SECTION **/
+    /** TOP SECTION **/
 
     .heading-content {
         padding-bottom: 8rem;
     }
 
-    .reviews-content {
-        padding-bottom: 3rem;
-    }
-
-    .heading-content {
-        padding-top: 2rem;
-    }
-
-    .heading-section p, .account-content p {
+    .heading-section p,
+    .general p {
         margin-bottom: 0rem;
     }
 
@@ -801,27 +735,10 @@ footer {
         font-size: 5.5rem;
     }
 
-    .reviews-text {
-        padding: 0rem 3rem;
-    }
-
-    /* Fading Edges */
-    .stamp-container::before, .stamp-container::after {
-        top: 5rem;
-        width: 100px;
-        height: 70%;
-    }
-
-    /** STAMP **/
-
-    .stamp-container {
-    padding: 50px 50px;
-    }
-
     /** FOOTER **/
 
     .logo {
-    padding-top: 0rem;
+        padding-top: 0rem;
     }
     
 }
@@ -913,7 +830,7 @@ footer {
         background-color: rgb(255, 255, 255);
     }
 
-    /** USER REVIEWS SECTION **/
+    /** TOP SECTION **/
 
     .heading-content {
         padding: 0rem 0%;
@@ -924,11 +841,10 @@ footer {
         padding-bottom: 2rem;
     }
 
-    .reviews-content {
-        padding-bottom: 3rem;
-    }
-
-    .heading-section .heading, .heading-section p, .reviews-content .heading {
+    .heading-section .heading,
+    .heading-section p,
+    .general-content .heading,
+    .last-content .heading {
         padding: 0rem 30px;
     }
 
@@ -939,75 +855,53 @@ footer {
     .heading-section .heading {
         font-size: 15vw;
         text-align: center;
-    }
-
-    .heading-content .heading {
-        font-size: 2.5rem;
         padding: 0 2rem;
     }
 
-    .reviews-content .heading {
+    /** GENERAL SECTION **/
+
+    .first-content,
+    .last-content {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .first-content .heading,
+    .general-content .heading,
+    .last-content .heading {
         font-size: 2rem;
     }
 
-    .heading-content .subtext, .reviews-content .subtext {
+    .general-content .subtext {
         font-size: 1rem;
         padding: 0 1rem;
     }
 
-    .reviews-text {
+    .general-text {
         padding: 0rem 2rem;
     }
 
-    .reviews-content p {
+    .first-content p,
+    .general-content p,
+    .last-content p {
         font-size: 1rem;
     }
 
-    .reviews-text ul li {
+    .general-text ul li,
+    .general-text ol li {
         font-size: 1rem;
     }
 
-    /** STAMP **/
-    
-    .stamp-center {
-        display: flex;
-        justify-content: center;
-        width: 96.5%;
-    }
-
-    .stamp-container {
-        padding: 50px 50px;
-        gap: 10px;
-    }
-
-    .stampimg {
-        width: auto;
-    }
-
-    .stamp-container {
-        justify-content: flex-start;
-    }
-
-    .stamp-container::before, .stamp-container::after {
-        width: 50px;
-        height: 85%;
-    }
-
-    .stamp-scroll-hint {
-        padding-top: 2rem;
-    }
-
-    /* Fading Edges */
-    .stamp-container::before, .stamp-container::after {
-        top: 5rem;
-        width: 100px;
-        height: 70%;
+    .schedule-table {
+        width: 55%;
+        font-size: 0.9rem;
+        box-shadow: 2px 2px 0px #f0e0c0, 5px 5px 10px rgba(0, 0, 0, 0.1);
     }
 
     /** FOOTER **/
 
     .logo {
-    padding-top: 0rem;
+        padding-top: 0rem;
     }
 
 }
