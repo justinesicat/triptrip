@@ -487,6 +487,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .featured-content .subtext {
+    font-size: 1.2rem;
     padding: 0px 90px;
 }
 
@@ -629,6 +630,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .reviews-content .subtext {
+    font-size: 1.2rem;
     padding: 0px 90px;
 }
 
