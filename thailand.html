@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>triptrip | your travel destination guide</title>
+
+    <link rel="stylesheet" href="css/thailandstyle.css">
+
+    <!-- Outside References -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  	<header>
+        <div class="logo-search">
+            <!-- triptrip Logo -->
+            <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="SEARCH ...">
+                <button onclick="location.href='search.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Hidden Checkbox for the HAMBURGER -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- HAMBURGER icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!-- Drawer for Navigation Drawer -->
+        <label for="menu-toggle" class="overlay"></label>
+
+        <!-- Drawer -->
+        <nav class="nav-drawer">
+            <!-- Close for Navigation Drawer -->
+            <label for="menu-toggle" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- Navigation Links -->
+            <ul class="nav_links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+
+            <!-- Dropdown Link -->
+            <li class="dropdown">
+                <a><i class="fa-solid fa-map"></i> TRIPS</a>
+                <div class="dropdown-center">
+                    <ul class="dropdown-content">
+                        <li><a href="featured.html">FEATURED TRIPS</a></li>
+                        <li><a href="userreviews.html">USER REVIEWS</a></li>
+                </ul>
+                </div>
+            </li>
+
+            <!-- Navigation Links Continuation -->
+            <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            <li><a href="account.html"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+	<main>
+		<!-- Heading -->
+        <section class="heading-section">
+            <div class="heading-content">
+                <p class="heading">france</p>
+                <p class="subtext">savor the sights, taste the art, live la vie française.</p>
+            </div>
+        </section>
+		
+		 <!-- First Section / Introduction -->
+        <section class="first-section" id="introduction">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+
+            <div class="first-content">
+				<section id="introduction">
+				  <p class="heading">introduction</p>
+				  <p>Thailand is a Southeast Asian constitutional monarchy known as the "Land of Smiles" for its hospitable people.
+					Located on the Indochinese Peninsula, it is bordered by Myanmar, Laos, Cambodia, and Malaysia. The country
+					boasts diverse geography, from northern forests to central plains and rugged southern coasts, and is famous for
+					its ornate temples, vibrant cuisine, bustling cities like the capital Bangkok, and pristine tropical landscapes.
+					Thailand is unique as it is the only Southeast Asian country that was never colonized by European powers.</p>
+				</section>
+			</div>
+        </section>
+
+		<!-- General Section / Top Tourist Spot -->            
+        <section class="general-section" id="tourist-spot">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+            
+                <div class="general-content">
+                    <div class="general-text">
+                        <p class="heading">top tourist spots</p>
+
+					  <article id="wat-phra-chetuphon">
+					    <hr><br><br>
+						<h3>Wat Phra Chetuphon</h3>
+						<p>Wat Phra Chetuphon Wimonmangkalaram Ratchaworamahawihan or Wat Pho is located on Maha Rat Road next to the
+						  Grand Palace. It is a first class royal temple and an ancient site, built under the orders of King Rama I for
+						  monks to study Dharma. During the reign of King Rama III, the temple was renovated and inscribed with academic
+						  texts across its walls, marking it as Thailand’s first university.</p>
+						<h4>Entrance Fee</h4>
+						<ul>
+						  <li>Foreigner Adult - 300.00 Baht</li>
+						  <li>Foreigner Child - 300.00 Baht</li>
+						</ul>
+						<h4>Schedule</h4>
+						<p>Open daily from 8:00 AM - 8:00 PM</p>
+						<h4>How to get there?</h4>
+						<p>Wat Pho is easily accessible by taking the BTS Skytrain to Saphan Taksin station, followed by a short boat
+						  ride to Tha Tien pier, just a brief walk from the temple.</p>
+						<h4>Best Time to Visit</h4>
+						<p>The best time to explore is between November and February, during the cooler months. Visit early in the
+						  morning or late afternoon to avoid the heat and crowds.</p>
+						<br><br><hr>
+					  </article>
+
+					  <article id="chatuchak-market">
+					  <hr><br><br>
+						<h3>Chatuchak Weekend Market</h3>
+						<p>Chatuchak Market, originally opened in 1942, is now the world’s largest weekend market with over 15,000
+						  stalls and 200,000 visitors each weekend. It began as a local flea market and has since become a must-visit
+						  attraction in Bangkok, offering everything from clothing and crafts to street food and antiques.</p>
+						<h4>Schedule</h4>
+						<ul>
+						  <li>Friday: 6:00 PM - 12:00 AM</li>
+						  <li>Saturday - Sunday: 9:00 AM - 6:00 PM</li>
+						</ul>
+						<h4>How to get there?</h4>
+						<ul>
+						  <li><b>BTS Skytrain:</b> Take the Sukhumvit Line to Mo Chit Station (N8), Exit 1.</li>
+						  <li><b>MRT:</b> Get off at Chatuchak Park or Kamphaeng Phet station.</li>
+						  <li><b>Tuk Tuk:</b> A traditional ride experience; fares range from 100–350 Baht depending on distance.</li>
+						  <li><b>Bus:</b> Cheapest option—only 20 Baht, ideal from Khao San Road area.</li>
+						</ul>
+						<h4>Best Time to Visit</h4>
+						<p>Arrive early in the morning when the market first opens to beat the crowds and enjoy the best shopping
+						  experience.</p>
+						  <br><br><hr>
+					  </article>
+
+					  <article id="grand-palace">
+					  <hr><br><br>
+						<h3>The Grand Palace</h3>
+						<p>Established in 1782, the Grand Palace served as the ceremonial residence of Thailand’s kings. It features
+						  magnificent buildings, including the Temple of the Emerald Buddha, courtyards, and museums. It remains an
+						  iconic symbol of Thai craftsmanship and spirituality.</p>
+						<h4>Schedule</h4>
+						<p>Open daily: 8:30 AM - 3:30 PM</p>
+						<h4>How to get there?</h4>
+						<p>Take the MRT Blue Line to Sanam Chai Station (15-minute walk to the palace) or the BTS Skytrain to Saphan
+						  Taksin Station, then a Chao Phraya Express Boat to Tha Chang Pier.</p>
+						<h4>Best Time to Visit</h4>
+						<p>Visit from November to February for the best weather conditions.</p>
+						<br><br><hr>
+					  </article>
+
+					  <article id="siam-paragon">
+					  <hr><br><br>
+						<h3>Siam Paragon</h3>
+						<p>This upscale shopping complex features luxury brands, gourmet food halls, car showrooms, and family-friendly
+						  attractions like SEA LIFE Bangkok Ocean World and Madame Tussauds. It’s one of Bangkok’s modern cultural hubs.
+						</p>
+						<h4>Schedule</h4>
+						<p>Open daily: 10:00 AM - 10:00 PM</p>
+						<h4>How to get there?</h4>
+						<p>Located at Siam BTS Station (CEN), accessible via both the Sukhumvit and Silom Lines. Taxis and shuttle bus
+						  services to Siam Premium Outlets are also available.</p>
+						<h4>Best Time to Visit</h4>
+						<p>Visit between November and February for pleasant weather, though May and June offer fewer crowds.</p>
+						<br><br><hr>
+					  </article>
+
+					  <article id="sanctuary-of-truth">
+					  <hr><br><br>
+						<h3>The Sanctuary of Truth</h3>
+						<p>The Sanctuary of Truth in Pattaya is a monumental all-wood structure standing 105 meters tall. It combines
+						  Thai craftsmanship with spiritual and philosophical symbolism, reflecting humanity’s relationship with the
+						  universe. Built to withstand seaside weather, it remains one of Thailand’s most unique architectural wonders.
+						</p>
+						<h4>Schedule</h4>
+						<p>Open daily: 8:00 AM - 8:30 PM</p>
+						<h4>How to get there?</h4>
+						<p>Take a baht bus north to Dolphin Circle, then walk 15 minutes or hire a motorcycle cab for the final stretch.
+						</p>
+						<h4>Best Time to Visit</h4>
+						<p>The best months are November to February for cooler weather and clearer views.</p>
+						<br><br><hr>
+					  </article>
+					</div>
+				 </div>
+			</section>
+
+		<section class="general-section" id="local-foods">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+            
+                <div class="general-content">
+                    <div class="general-text">
+                        <p class="heading">local foods</p>
+                        <p class="subtext">bites worth traveling for.</p>
+						  <ul>
+							<li><b>Tom Yum Goong:</b> A spicy and sour shrimp soup balancing heat, tang, and sweetness.</li>
+							<li><b>Pad Thai:</b> Stir-fried rice noodles with eggs, tofu, or shrimp, garnished with peanuts and lime.</li>
+							<li><b>Som Tum:</b> Spicy green papaya salad often paired with grilled chicken or sticky rice.</li>
+							<li><b>Kai Med Ma Muang:</b> Stir-fried chicken with cashews, soy sauce, and honey—mild but flavorful.</li>
+							<li><b>Thai Chicken Satay:</b> Grilled marinated chicken skewers served with peanut sauce.</li>
+						  </ul>
+					</div>
+                </div>
+		</section>
+
+		<section class="general-section" id="traditions">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+            
+                <div class="general-content">
+                    <div class="general-text">
+                        <p class="heading">traditions</p>
+                        <p class="subtext">from old tales to living customs — explore them all.</p>
+						  <ul>
+							<li><b>The Wai Greeting:</b> The traditional Thai greeting, called the “wai,” involves pressing your palms
+							  together in front of your chest and bowing slightly. It’s used to greet, thank, or apologize and shows
+							  respect—especially to elders, monks, or superiors.</li>
+
+							<li><b>Removing Shoes Indoors:</b> Before entering homes, temples, and even some shops, it’s customary to remove
+							  your shoes. This practice reflects respect and cleanliness, as shoes are considered dirty and unfit for sacred
+							  or living spaces.</li>
+
+							<li><b>Respect for the Head and Feet:</b> In Thai culture, the head is viewed as the most sacred part of the
+							  body while the feet are the lowest. Touching someone’s head or pointing your feet at others, religious icons,
+							  or images of the King is considered very disrespectful.</li>
+
+							<li><b>Polite Speech:</b> Thais often end sentences with polite particles — “krub” (for men) and “ka” (for
+							  women) — to express respect and friendliness in everyday conversation.</li>
+
+							<li><b>Temple Etiquette:</b> When visiting temples, dress modestly by covering shoulders and knees. Always
+							  remove hats and shoes before entering, keep your voice low, and never point your feet toward Buddha statues.
+							  Women should avoid touching monks.</li>
+
+							<li><b>Respect for the Monarchy:</b> The Thai royal family is deeply revered. Showing disrespect toward the
+							  monarchy is socially unacceptable and punishable by law. Always stand during the national anthem and avoid
+							  casual discussion about the royal family.</li>
+
+							<li><b>Maintaining Harmony and “Saving Face”:</b> Thais value calmness and avoiding confrontation. Raising your
+							  voice, arguing publicly, or embarrassing someone is considered rude. Smiling and staying composed are signs of
+							  maturity and respect.</li>
+
+							<li><b>Dining Etiquette:</b> Thai meals are often shared family-style. Use a spoon to eat and a fork to push
+							  food onto it — never put a fork directly in your mouth. Slurping noodles is acceptable and shows appreciation
+							  for the food. Wait for the eldest person to begin eating before starting your meal.</li>
+						  </ul>
+					</div>
+                </div>
+		</section>
+
+		<section class="general-section" id="events">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+            
+                <div class="general-content">
+                    <div class="general-text">
+                        <p class="heading">events</p>
+                        <p class="subtext">these will spark joy and connection.</p>
+						  <ul>
+							<li><b>Yi Peng Lantern Festival:</b> Celebrated mainly in Chiang Mai, thousands of paper lanterns are released
+							  into the sky, symbolizing the release of worries and bad luck. Participants often write wishes on their
+							  lanterns before letting them float away, creating one of the most visually stunning events in Thailand.</li>
+							<li><b>Poi Sang Long Festival:</b> A colorful ordination ceremony for young Shan boys in Northern Thailand,
+							  particularly in Mae Hong Son. The boys are dressed in ornate costumes and paraded through the streets before
+							  being ordained as novice monks, marking an important rite of passage.</li>
+							<li><b>Traditional Lanna Dance:</b> An iconic part of Northern Thai culture featuring graceful hand and body
+							  movements. Dances such as Fon Leb (Finger Dance) and Fon Tien (Candle Dance) are performed during cultural
+							  festivals, showcasing elegance and devotion through movement and symbolism.</li>
+							<li><b>Hae Nang Maew (Pray for Rainfall):</b> A unique rain-making ritual where villagers parade with a cat,
+							  believed to have spiritual power to bring rain. The ritual highlights Thailand’s deep agricultural traditions
+							  and connection between humans, nature, and spirituality.</li>
+							<li><b>Bun Bang Fai (Rocket Festival):</b> A lively and colorful event held in Yasothon province, where homemade
+							  rockets are launched into the sky to encourage rainfall for the farming season. The festival features music,
+							  parades, and traditional dances celebrating fertility and prosperity.</li>
+						  </ul>
+					</div>
+                </div>
+		</section>
+		
+		
+		<section class="general-section" id="travel-tips">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+            
+                <div class="general-content">
+                    <div class="general-text">
+                        <p class="heading">travel tips</p>
+                        <p class="subtext">little tips that make a big difference on the road.</p>
+						  <ul>
+							<li><b>Timing:</b> The rainy season varies by region—June–October in most parts, and October–December along the
+							  Gulf Coast.</li>
+							<li><b>Health:</b> Vaccinations for tetanus and hepatitis A are recommended; malaria precautions may be needed
+							  in border regions.</li>
+							<li><b>Planning:</b> Book popular activities in advance during November–March, Thailand’s peak tourist season.
+							</li>
+						  </ul>
+					</div>
+                </div>
+		</section>
+		
+		 <!-- Last Section -->
+        <section class="last-section" id="gallery">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+
+            <div class="last-content">
+                <p class="heading">gallery</p>
+                <p class="subtext">see the sights, feel the moments.</p>
+            </div>
+
+            <!-- decorative bottom -->
+            <img class="news-bot" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+        </section>
+	  </main>
+
+   <!-- FOOTER Section -->
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="images/triptripLOGO.png" alt="triptrip logo">
+
+            <!-- Footer Navigation Links -->
+            <div class="footer-links">
+                <a href="about.html" title="About">About</a>
+                <a href="contact.html" title="Contact">Contact</a>
+                <a href="privacypolicy.html" title="Privacy Policy">Privacy Policy</a>
+            </div>
+
+            <!-- Social Media-->
+            <div class="socials">
+                <a href="https://www.facebook.com/triptrip" target="_blank" title="triptrip's Facebook Page">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/triptrip" target="_blank" title="triptrip's Instagram Page">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.x.com/triptrip" target="_blank" title="triptrip's X / Twitter Page">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.tiktok.com/@triptrip" target="_blank" title="triptrip's TikTok Page">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 triptrip. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

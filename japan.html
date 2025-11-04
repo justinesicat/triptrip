@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>triptrip | your travel destination guide</title>
+	<link rel="stylesheet" href="css/japanstyle.css">
+  
+      <!-- Outside References -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+	<header>
+        <div class="logo-search">
+            <!-- triptrip Logo -->
+            <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="SEARCH ...">
+                <button onclick="location.href='search.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Hidden Checkbox for the HAMBURGER -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- HAMBURGER icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!-- Drawer for Navigation Drawer -->
+        <label for="menu-toggle" class="overlay"></label>
+
+        <!-- Drawer -->
+        <nav class="nav-drawer">
+            <!-- Close for Navigation Drawer -->
+            <label for="menu-toggle" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- Navigation Links -->
+            <ul class="nav_links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+
+            <!-- Dropdown Link -->
+            <li class="dropdown">
+                <a><i class="fa-solid fa-map"></i> TRIPS</a>
+                <div class="dropdown-center">
+                    <ul class="dropdown-content">
+                        <li><a href="featured.html">FEATURED TRIPS</a></li>
+                        <li><a href="userreviews.html">USER REVIEWS</a></li>
+                </ul>
+                </div>
+            </li>
+
+            <!-- Navigation Links Continuation -->
+            <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            <li><a href="account.html"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+	<main>
+		<!-- First Section / Introduction -->
+        <section class="first-section" id="introduction">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+
+            <div class="first-content">
+                <p class="heading">introduction</p>
+                <p class="subtext">
+							Japan is an East Asian island nation known as the "Land of the Rising Sun," celebrated for its unique balance
+							between tradition and modernity. The country consists of thousands of islands, with the four largest being
+							Honshu, Hokkaido, Kyushu, and Shikoku. Japan’s cultural depth, advanced technology, and natural beauty make it
+							one of the most fascinating destinations on Earth. From serene temples and shrines to neon-lit cityscapes and
+							culinary wonders, Japan offers travelers an unforgettable experience...
+				</p>
+		</section>
+						
+		<!-- General Section / Top Tourist Spot -->            
+        <section class="general-section" id="tourist-spot">
+            <!-- decorative top -->
+            <img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+            
+                <div class="general-content">
+                    <div class="general-text">
+                        <p class="heading">top tourist spots</p>
+						<section id="introduction">
+
+						<section id="tourist-spots">
+
+						  <article id="fushimi-inari">
+						  <hr><br><br>
+							<h3>Fushimi Inari-taisha Shrine</h3>
+							<p>Located in southern Kyoto, Fushimi Inari Shrine is one of Japan’s most famous Shinto shrines, dedicated to
+							  Inari—the deity of rice, prosperity, and agriculture. It’s renowned for its thousands of vermilion torii gates
+							  that line scenic mountain trails up Mount Inari. Fox statues, symbolizing Inari’s messengers, are scattered
+							  throughout the complex, adding to the mystical atmosphere.</p>
+							<h4>How to get there?</h4>
+							<ul>
+							  <li>By Train: Take the JR Nara Line to Inari Station, or Keihan Main Line to Fushimi Inari Station (5-minute
+								walk).</li>
+							  <li>By Bus: Ride the Minami 5 Line and get off at Inari Taisha-mae stop (7-minute walk).</li>
+							  <li>By Car: Use the Meishin Expressway via Kyoto Minami Interchange (20 minutes from Hanshin Kamitoba Exit).
+							  </li>
+							</ul>
+							<h4>Best Time to Visit</h4>
+							<p>Visit early morning or before sunrise for fewer crowds and beautiful soft lighting. October–December offers
+							  perfect weather and stunning autumn foliage.</p>
+							  <br><br><hr>
+						  </article>
+
+						  <article id="kinkakuji">
+						  <hr><br><br>
+							<h3>Kinkakuji Temple (Golden Pavilion)</h3>
+							<p>Kinkakuji, or the Golden Pavilion, is one of Kyoto’s most iconic landmarks. This Zen temple’s top two floors
+							  are covered in gold leaf, shimmering beautifully over the Mirror Pond. Originally a shogun’s retirement villa,
+							  it became a Rinzai Zen temple in 1408 and symbolizes harmony between architecture and nature.</p>
+							<h4>How to get there?</h4>
+							<p>From Kyoto Station, take Kyoto City Bus #205 (40 minutes) or the Karasuma Subway Line to Kitaoji Station,
+							  then a short taxi or bus ride.</p>
+							<h4>Best Time to Visit</h4>
+							<p>Visit early morning (around 9:00 AM) for serene reflections on the pond and fewer tourists. Late afternoons
+							  are equally stunning with warm golden hues.</p>
+							<br><br><hr>
+						  </article>
+
+						  <article id="shinjuku-gyoen">
+						  <hr><br><br>
+							<h3>Shinjuku Gyoen National Garden</h3>
+							<p>This vast garden in Tokyo blends traditional Japanese, English, and French landscaping styles. Originally an
+							  imperial garden from 1906, it’s now open to the public and spans over 58 hectares. It’s especially famous for
+							  cherry blossoms in spring and tranquil walking paths year-round.</p>
+							<h4>How to get there?</h4>
+							<p>Accessible from three gates: Shinjuku Gate (10-minute walk from JR Shinjuku Station), Okido Gate, and
+							  Sendagaya Gate.</p>
+							<h4>Best Time to Visit</h4>
+							<p>Visit mid-April for cherry blossoms or early autumn for vibrant foliage. Avoid weekends if you prefer a
+							  quieter experience.</p>
+							  <br><br><hr>
+						  </article>
+
+						  <article id="dotonbori">
+						  <hr><br><br>
+							<h3>Dotonbori District (Osaka)</h3>
+							<p>Dotonbori is Osaka’s neon-filled nightlife hub, famous for its massive signboards, street food, and
+							  entertainment. The area offers local delicacies such as takoyaki (octopus balls) and okonomiyaki (savory
+							  pancakes). At night, the canal area glows with energy, making it a must-visit for urban explorers.</p>
+							<h4>How to get there?</h4>
+							<p>Take the Midosuji Line to Namba Station. Walk north towards Shinsaibashi — Dotonbori Bridge marks the
+							  district’s heart.</p>
+							<h4>Best Time to Visit</h4>
+							<p>Evening is best for the full lights-and-crowd experience. Great spot for nightlife, food, and photography.
+							</p>
+							<br><br><hr>
+						  </article>
+
+						  <article id="sensoji">
+						  <hr><br><br>
+							<h3>Senso-ji Temple (Tokyo)</h3>
+							<p>Located in Asakusa, Senso-ji is Tokyo’s oldest temple, dating back to 645 AD. Dedicated to the bodhisattva
+							  Kannon, it features a striking five-story pagoda, the Kaminarimon Gate, and Nakamise shopping street filled
+							  with souvenirs and snacks. The temple blends spirituality with the hustle of old Edo charm.</p>
+							<h4>How to get there?</h4>
+							<p>Accessible via Tokyo Metro Ginza Line, Toei Asakusa Line, or Tobu Sky Tree Line to Asakusa Station (5-minute
+							  walk).</p>
+							<h4>Best Time to Visit</h4>
+							<p>Visit after sunset for ethereal lighting. Open until 11 PM daily.</p>
+							<br><br><hr>
+						  </article>
+
+						  <article id="kiyomizudera">
+						  <hr><br><br>
+							<h3>Kiyomizu-dera Temple (Kyoto)</h3>
+							<p>Perched atop Mount Otowa, Kiyomizu-dera offers panoramic views of Kyoto. The wooden stage, supported by
+							  massive pillars, overlooks the city and cherry blossoms below. The temple’s name means “Pure Water Temple,”
+							  derived from the Otowa Waterfall flowing beneath it.</p>
+							<h4>How to get there?</h4>
+							<p>Take Kyoto City Bus #100 or #206 to Gojozaka or Kiyomizu-michi stop, then a 10-minute uphill walk.</p>
+							<h4>Best Time to Visit</h4>
+							<p>Visit early morning or during evening illuminations in cherry blossom or autumn leaf season.</p>
+							<br><br><hr>
+						  </article>
+
+						  <article id="meiji-jingu">
+						  <hr><br><br>
+							<h3>Meiji Jingu Shrine (Tokyo)</h3>
+							<p>Located near Harajuku, Meiji Jingu is a Shinto shrine dedicated to Emperor Meiji and Empress Shoken.
+							  Surrounded by a lush forest, it offers peace amidst the city’s chaos. The shrine often hosts traditional
+							  weddings and festivals throughout the year.</p>
+							<h4>How to get there?</h4>
+							<p>Take JR Yamanote Line to Harajuku Station or Tokyo Metro’s Chiyoda/Fukutoshin lines to Meiji-jingumae Station
+							  (10-minute walk).</p>
+							<h4>Best Time to Visit</h4>
+							<p>Late April to early May during the Spring Grand Festival for performances of ceremonial dances and music.</p>
+							<br><br><hr>
+						  </article>
+
+						  <article id="arashiyama">
+						  <hr><br><br>
+							<h3>Arashiyama Bamboo Grove (Kyoto)</h3>
+							<p>Arashiyama is Kyoto’s scenic district famous for its bamboo forest, historical temples, and the Togetsukyo
+							  Bridge. The bamboo grove offers an ethereal experience, especially in early morning light when crowds are
+							  minimal.</p>
+							<h4>How to get there?</h4>
+							<p>Reach via JR Sagano Line to Saga-Arashiyama Station or Hankyu Line to Arashiyama Station.</p>
+							<h4>Best Time to Visit</h4>
+							<p>Visit early morning for soft sunlight filtering through the bamboo or late afternoon for golden hues.</p>
+							<br><br><hr>
+						  </article>
+
+						  <article id="atomic-bomb-dome">
+						  <hr><br><br>
+							<h3>Atomic Bomb Dome (Hiroshima)</h3>
+							<p>The Atomic Bomb Dome, once the Hiroshima Prefectural Industrial Promotion Hall, stands as a UNESCO World
+							  Heritage Site and a haunting reminder of peace. It survived the atomic blast of 1945 and remains part of the
+							  Hiroshima Peace Memorial Park.</p>
+							<h4>How to get there?</h4>
+							<p>Take Hiroshima Electric Railway streetcar #2 or #6 from JR Hiroshima Station to Genbaku Dome-mae stop (17
+							  minutes).</p>
+							<h4>Best Time to Visit</h4>
+							<p>Visit early morning or late evening for quiet reflection and photography without large crowds.</p>
+							<br><br><hr>
+						  </article>
+						</section>
+						<section class="general-section" id="local-foods">
+						<!-- decorative top -->
+						<img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+						
+							<div class="general-content">
+								<div class="general-text">
+									<p class="heading">local foods</p>
+									<p class="subtext">bites worth traveling for.</p>
+										<section id="local-foods">
+										  <ul>
+											<li><b>Sushi:</b> The quintessential Japanese dish, made with vinegared rice and fresh fish or vegetables.</li>
+											<li><b>Udon:</b> Thick, chewy wheat noodles served in soups or stir-fried dishes.</li>
+											<li><b>Tempura:</b> Lightly battered and deep-fried seafood and vegetables, served with dipping sauce.</li>
+											<li><b>Yakitori:</b> Grilled chicken skewers seasoned with salt or tare sauce, served in izakayas nationwide.
+											</li>
+											<li><b>Ramen:</b> Wheat noodles in flavorful broth (miso, soy sauce, salt, or tonkotsu-based) with toppings like
+											  pork, egg, and seaweed.</li>
+										  </ul>
+									</div>
+							</div>
+						</section>
+
+						<section class="general-section" id="traditions">
+						<!-- decorative top -->
+						<img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+						
+							<div class="general-content">
+								<div class="general-text">
+									<p class="heading">traditions</p>
+									<p class="subtext">from old tales to living customs — explore them all.</p>
+									<section id="traditions">
+						  <ul>
+							<li><b>Removing Shoes Indoors:</b> When entering someone’s home, traditional inns (ryokan), temples, or some
+							  restaurants, it is customary to remove your shoes at the entrance. Slippers are often provided, but they
+							  should be removed again when stepping onto tatami mats.</li>
+
+							<li><b>Bowing (Ojigi):</b> Bowing is the traditional form of greeting and respect in Japan. It is used when
+							  meeting someone, saying thank you, apologizing, or showing appreciation. The deeper and longer the bow, the
+							  more respect it conveys.</li>
+
+							<li><b>Quiet and Respectful Behavior in Public:</b> Speaking softly and keeping noise to a minimum is considered
+							  polite, especially on public transport and in crowded areas. Avoid phone calls or loud conversations in public
+							  spaces.</li>
+
+							<li><b>Dining Etiquette and Chopstick Manners:</b> Before eating, it is polite to say “itadakimasu,” and after
+							  finishing, “gochisōsama deshita.” Never stick chopsticks upright in rice or pass food directly from one pair
+							  of chopsticks to another, as these actions resemble funeral rituals.</li>
+
+							<li><b>Respecting Temples and Shrines:</b> Visitors should purify themselves at the fountain before entering by
+							  rinsing their hands and mouth. Dress modestly, speak quietly, and be mindful of photography rules. Always bow
+							  at the torii gate when entering or leaving a shrine.</li>
+
+							<li><b>No Tipping Culture:</b> Tipping is not a common practice in Japan. Excellent service is part of the
+							  culture, and offering a tip can be seen as awkward or disrespectful. A sincere thank you is the preferred way
+							  to show appreciation.</li>
+
+							<li><b>Punctuality:</b> Being on time is highly valued in Japanese culture. Whether for trains, business
+							  meetings, or social gatherings, arriving even a few minutes late is considered impolite.</li>
+
+							<li><b>Respect for Personal Space:</b> Physical contact such as hugs or handshakes is uncommon unless initiated
+							  by locals. Maintaining personal space and avoiding direct eye contact for too long is seen as a sign of
+							  politeness.</li>
+						  </ul>
+									</div>
+								</div>
+						</section>
+						
+						<section class="general-section" id="events">
+						<!-- decorative top -->
+						<img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+						
+							<div class="general-content">
+								<div class="general-text">
+									<p class="heading">events</p>
+									<p class="subtext">these will spark joy and connection.</p>
+						  <ul>
+							<li><b>Higashi Sanbin Flower Valley Cosmos Festival:</b> Every October, Shimane’s Higashi Sanbin Flower Valley
+							  bursts with around 600,000 colorful cosmos flowers across 10 hectares. The festival takes place on the second
+							  Sunday of October when blooms are at their peak. Visitors can also enjoy a poppy festival here in June,
+							  celebrating the valley’s beauty throughout the year.</li>
+
+							<li><b>Yushima Cat Festival:</b> Established in 2015, this feline-themed event in Tokyo’s Yushima district
+							  brings local businesses and cat lovers together. Cafes serve cat-inspired dishes, shops sell themed
+							  merchandise, and the local mascot “Sabu-chan” makes special appearances — all in the spirit of community and
+							  fun.</li>
+
+							<li><b>Nagasaki Kunchi Festival:</b> Celebrated annually from October 7–9, this centuries-old event honors Suwa
+							  Shrine’s guardian deity. It features a spectacular blend of Japanese, Chinese, and Dutch influences, including
+							  dragon dances, umbrella floats, and boat-shaped performances. Each neighborhood only participates once every
+							  seven years, making every Kunchi unique.</li>
+
+							<li><b>Takayama Autumn Festival:</b> Held every October 9–10 at Sakurayama Hachiman Shrine, this traditional
+							  celebration marks the end of summer. Lanterns illuminate the town as ornate floats (yatai) parade through the
+							  streets, accompanied by food stalls and performers — one of Japan’s most picturesque seasonal festivals.</li>
+
+							<li><b>Tokyo Auto Salon:</b> Hosted every January at Makuhari Messe in Chiba, this massive automotive event
+							  showcases Japan’s cutting-edge car culture, from race cars to custom builds. Open to the public, it’s a
+							  paradise for car enthusiasts featuring concept vehicles, tuning exhibitions, and model showcases from major
+							  brands.</li>
+						  </ul>
+								</div>
+							</div>
+						</section>
+
+						<section class="general-section" id="travel-tips">
+						<!-- decorative top -->
+						<img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+						
+							<div class="general-content">
+								<div class="general-text">
+									<p class="heading">travel tips</p>
+									<p class="subtext">little tips that make a big difference on the road.</p>
+						  <ul>
+							<li><b>Transportation:</b> Get a Japan Rail Pass for unlimited JR rides across the country.</li>
+							<li><b>Etiquette:</b> Always be punctual and avoid talking loudly in public transport.</li>
+							<li><b>Weather:</b> Visit March–May or October–November for the best weather and scenic views.</li>
+							<li><b>Cash:</b> Many places still prefer cash over cards—carry yen for convenience.</li>
+						  </ul>
+								</div>
+							</div>
+						</section>
+					  </main>
+					  
+					   <!-- Last Section -->
+						<section class="last-section" id="gallery">
+							<!-- decorative top -->
+							<img class="news-top" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+
+							<div class="last-content">
+								<p class="heading">gallery</p>
+								<p class="subtext">see the sights, feel the moments.</p>
+							</div>
+
+							<!-- decorative bottom -->
+							<img class="news-bot" src="images/sectiontop/newstop.webp" alt="" aria-hidden="true">
+						</section>
+
+	  <!-- FOOTER Section -->
+		<footer>
+			<div class="footer-content">
+				<img class="logo" src="images/triptripLOGO.png" alt="triptrip logo">
+
+				<!-- Footer Navigation Links -->
+				<div class="footer-links">
+					<a href="about.html" title="About">About</a>
+					<a href="contact.html" title="Contact">Contact</a>
+					<a href="privacypolicy.html" title="Privacy Policy">Privacy Policy</a>
+				</div>
+
+				<!-- Social Media-->
+				<div class="socials">
+					<a href="https://www.facebook.com/triptrip" target="_blank" title="triptrip's Facebook Page">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a href="https://www.instagram.com/triptrip" target="_blank" title="triptrip's Instagram Page">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a href="https://www.x.com/triptrip" target="_blank" title="triptrip's X / Twitter Page">
+						<i class="fa-brands fa-x-twitter"></i>
+					</a>
+					<a href="https://www.tiktok.com/@triptrip" target="_blank" title="triptrip's TikTok Page">
+						<i class="fa-brands fa-tiktok"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>© 2025 triptrip. All Rights Reserved.</p>
+			</div>
+		</footer>
+</body>
+
+</html>
