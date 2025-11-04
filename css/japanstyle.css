@@ -8,22 +8,6 @@
     src: url('../font/MEDICINE\ SHOW\ CAPS.ttf') format('truetype');
 }
 
-:root {
-    --color-primary-orange: #E5952B;
-    --color-secondary-green: #005C33;
-    --color-light-background: #F8F8F8;
-    --color-white: #FFFFFF;
-    --font-main: 'Inter', sans-serif;
-    --font-display: 'Playfair Display', serif;
-}
-
-@font-face {
-    font-family: 'LocalInter';
-    src: url('Inter-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-} 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -236,7 +220,9 @@ header {
     cursor: pointer;
 }
 
-/* Title Section */
+/** TRIP SECTION **/
+
+/* Title Section (Country Name with Subtext) */
 
 .heading-section {
     z-index: 1;
@@ -309,7 +295,7 @@ header {
     width: 100%;
     padding-left: 5rem;
     padding-right: 5rem;
-    margin-bottom: -4rem;
+    margin-bottom: -5rem;
     padding-bottom: 8rem;
     padding-top: 3rem;
     position: relative;
@@ -330,7 +316,6 @@ header {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333;
 }
 
 /* Middle Section */
@@ -347,7 +332,7 @@ header {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    margin-bottom: -4rem;
+    margin-bottom: -5rem;
     padding-bottom: 8rem;
     padding-top: 3rem;
     position: relative;
@@ -431,122 +416,59 @@ header {
     max-width: 1000px;
 }
 
-.purpose-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.purpose-text {
-    flex: 1;
-    color: #FFFFFF;
-}
-
-.purpose-text .subtext{
-    text-align: justify;
-}
-
-.purpose-text .heading{
-    text-align: center;
-}
-
-.purpose-image {
-    flex: 1;
+/* Table Style */
+.schedule-table {
+    width: 100%;
     max-width: 500px;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-}
-
-.purpose-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease-in-out;
-}
-
-.purpose-image:hover img {
-    transform: scale(1.05);
-}
-
-.team{
-    margin-bottom: 5rem;
-}
-
-.team-intro {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.team-intro h3{
-    color: var(--color-primary-orange);
-}
-
-.team-intro p{
-    color: var(--color-white);
-}
-
-.members-grid {
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 2rem;
-    padding-top: 1rem;
-    justify-content: center;
-    width: 100%;
-}
-
-.member-card {
-    background-color: var(--color-white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(229, 149, 43, 0.2);
-}
-
-.member-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 4px solid var(--color-secondary-green);
-}
-
-.member-card h4 {
-    color: var(--color-secondary-green);
-}
-
-.member-card p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.misvis-content h3 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 5rem;
-    color: var(--color-primary-orange);
+    border-collapse: collapse;
+    margin: 3rem auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
     letter-spacing: 1px;
+    color: #3b3b3b;
+    background: #fffdf8;
+    box-shadow: 5px 5px 0px #f0e0c0, 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0d59d;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
 }
 
-.misvis-content {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
+.schedule-table th {
+    background-color: #F7941D;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    border-bottom: 2px dashed #f8c37a;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
 }
 
-.mission, .vision {
-    padding: 1rem;
-    border-left: 5px solid var(--color-primary-orange);
-    border-right: 5px solid var(--color-primary-orange);
-    padding-left: 2rem;
+.schedule-table td {
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px dashed #f0d59d;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #fff9ef;
+}
+
+.schedule-table tr:hover {
+    background-color: #fff3e0;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-table td:first-child {
+    font-weight: 700;
+    color: #2b2b2b;
+    text-transform: uppercase;
+}
+
+.schedule-table td:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #444;
 }
 
 /** Last Section **/
@@ -563,7 +485,7 @@ header {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
     padding-top: 3rem;
     position: relative;
     background-color: rgb(255, 255, 255);
@@ -662,7 +584,7 @@ footer {
 
 /** SECTION DESIGN **/
 
-.edgecurve-top {
+.news-top {
     display: block;
     width: 100%;
     height: auto;
@@ -672,7 +594,7 @@ footer {
     pointer-events: none;
 }
 
-.edgecurve-bot {
+.news-bot {
     display: block;
     width: 100%;
     height: auto;
@@ -811,18 +733,6 @@ footer {
 
     .heading-content .heading {
         font-size: 5.5rem;
-    }
-
-    .purpose-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .members-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        padding-top: 1rem;
     }
 
     /** FOOTER **/
@@ -982,16 +892,10 @@ footer {
         font-size: 1rem;
     }
 
-    .purpose-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .members-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        padding-top: 1rem;
+    .schedule-table {
+        width: 55%;
+        font-size: 0.9rem;
+        box-shadow: 2px 2px 0px #f0e0c0, 5px 5px 10px rgba(0, 0, 0, 0.1);
     }
 
     /** FOOTER **/
