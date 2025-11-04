@@ -316,6 +316,56 @@ header {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    color: #333;
+}
+
+/* Photo of the Introduction */
+
+.review-photo {
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.review-photo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #fffaf2;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    filter:brightness(0.8)
+}
+
+.review-photo .photo-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffdf6;
+    font-family: "Southwell", cursive;
+    font-size: 6rem;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+    border-radius: 5px;
+}
+
+/* Tape on Photo */
+
+.review-photo::before {
+    content: '';
+    position: absolute;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/pngtree-fix-tape-patch-of-clear-transparent-ripped-sticky-stripes-isolated-on-png-image_4902123.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    opacity: 0.3;
 }
 
 /* Middle Section */
@@ -471,7 +521,7 @@ header {
     color: #444;
 }
 
-/** Last Section **/
+/* Last Section */
 
 .last-section {
     z-index: 1;
@@ -485,7 +535,7 @@ header {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    padding-bottom: 8rem;
+    padding-bottom: 6rem;
     padding-top: 3rem;
     position: relative;
     background-color: rgb(255, 255, 255);
@@ -506,6 +556,140 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     color: #3e3e3e;
     line-height: 1.6;
+}
+
+/* GALLERY SECTION */
+.gallery-image {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 2rem 0;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* SLIDES */
+
+.slide {
+    flex: 0 0 auto;
+    width: 350px;
+    height: 230px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.slide:hover img {
+    filter: brightness(1.2);
+}
+
+.toggle {
+    display: none;
+}
+
+.slide .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.toggle:checked + .slide img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3);
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    z-index: 1000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.toggle:checked + .slide .overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay {
+    cursor: pointer;
+}
+
+/* Scrollbar Design */
+
+/* For Firefox */
+.stamp-container {
+    scrollbar-width: thin;
+    scrollbar-color: #222222 #ffffff;
+}
+
+/* Chrome, Edge, Safari */
+.carousel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #222222, #222222);
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0 0 4px rgba(255,255,255,0.3);
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #222222, #222222);
+}
+
+.carousel::-webkit-scrollbar-corner {
+    background: #ffffff;
+}
+
+.gallery-scroll-hint {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    font-style: italic;
+    opacity: 0.7;
+    user-select: none;
+    padding: 2% 0;
 }
 
 /** FOOTER **/
@@ -584,7 +768,7 @@ footer {
 
 /** SECTION DESIGN **/
 
-.news-top {
+.section-top {
     display: block;
     width: 100%;
     height: auto;
@@ -594,12 +778,10 @@ footer {
     pointer-events: none;
 }
 
-.news-bot {
+.section-bot {
     display: block;
     width: 100%;
     height: auto;
-    position: relative;
-    transform: rotate(180deg);
     margin-top: -2px;
     z-index: 2;
     pointer-events: none;
@@ -859,6 +1041,13 @@ footer {
     }
 
     /** GENERAL SECTION **/
+
+    .review-photo::before {
+        top: -50px;
+        width: 100px;
+        height: 100px;
+    }
+
 
     .first-content,
     .last-content {
