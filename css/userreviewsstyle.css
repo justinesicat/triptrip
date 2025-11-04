@@ -220,9 +220,9 @@ header {
     cursor: pointer;
 }
 
-/** PRIVACY POLICY SECTION **/
+/** USER REVIEWS SECTION **/
 
-.privacypolicyheading-section {
+.userreviewsheading-section {
     z-index: 1;
     position: relative;
     overflow: visible;
@@ -230,18 +230,20 @@ header {
     margin: 0;
 }
 
-.privacypolicyheading-content {
+.userreviewsheading-content {
     box-sizing: border-box;
     display: block;
     width: 100%;
     margin-bottom: -5rem;
     padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     position: relative;
     overflow: visible;
     z-index: 1;
 }
 
-.policy-section {
+.review-carousel {
     z-index: 1;
     position: relative;
     overflow: visible;
@@ -249,20 +251,50 @@ header {
     margin: 0;
 }
 
-.policy-content {
+.reviews-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
+}
+
+.submitreview-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
+}
+
+.reviews-content {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    margin: 0 auto;
-    padding: 3rem 0%;
-    padding-bottom: 3rem;
+    margin-bottom: -5rem;
+    padding-bottom: 8rem;
+    padding-top: 3rem;
     position: relative;
     background-color: rgb(255, 255, 255);
     overflow: visible;
     z-index: 1;
 }
 
-.policy-content .heading {
+.carousel-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-bottom: -5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.carousel-content .heading {
+    text-align: center;
     font-size: 3rem;
     font-family: Elephant;
     margin-bottom: 1rem;
@@ -270,13 +302,21 @@ header {
     text-shadow: 0 0 1px black;
 }
 
-.policy-content p {
+.reviews-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin: 1rem 0rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.reviews-content p {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
-.privacypolicyheading-content .heading {
+.userreviewsheading-content .heading {
     display: flex;
     justify-content: center;
     text-align: start;
@@ -301,7 +341,7 @@ header {
     100% { text-shadow: 3px 0 8px white; }
 }
 
-.privacypolicyheading-content p {
+.userreviewsheading-content p {
     text-align: center;
     font-size: 1.25vw;
     color: white;
@@ -310,22 +350,22 @@ header {
     padding-top: 20px;
 }
 
-.policy-text {
+.reviews-text {
     padding: 0rem 5rem;
 }
 
-.policy-text ul li {
+.reviews-text ul li {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     line-height: 1.6;
 }
 
-.policy-text section {
+.reviews-text section {
     margin: 2.5rem 0rem;
 }
 
-.policy-text .email {
+.reviews-text .email {
     color:#222
 }
 
@@ -337,6 +377,400 @@ header {
 
 .centerlist ul {
     max-width: 1000px;
+}
+
+/* Photo of the Review */
+
+.review-photo {
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.review-photo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #fffaf2;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    filter:brightness(0.5)
+}
+
+.review-photo .photo-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffdf6;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+
+/* Tape on Photo */
+
+.review-photo::before {
+    content: '';
+    position: absolute;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/pngtree-fix-tape-patch-of-clear-transparent-ripped-sticky-stripes-isolated-on-png-image_4902123.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    opacity: 0.3;
+}
+
+/* Stamp Design */
+
+.stamp-center {
+    display: flex;
+    justify-content: center;
+    width: 95.6%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.stamp-container {
+    display: flex;
+    justify-content:start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 50px 200px;
+}
+
+/* Fading Edges */
+.stamp-container::before, .stamp-container::after {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    width: 300px;
+    height: 70%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.stamp-container::before {
+    left: 0;
+    background: linear-gradient(to right, #fff 10%, transparent);
+}
+
+.stamp-container::after {
+    right: 0;
+    background: linear-gradient(to left, #fff 10%, transparent);
+}
+
+.stamp {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 400px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stamp:hover {
+    transform: translateY(-10px) rotate(-1deg);
+}
+
+.stampimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(1) contrast(1);
+}
+
+.stamp-photo {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 70%;
+    object-fit: cover;
+    z-index: 1;
+    border: 3px solid #e7e3d4;
+    box-shadow: 0 0 6px rgba(0,0,0,0.35);
+    filter: brightness(1.3);
+    opacity: 0.3;
+    mix-blend-mode: multiply;
+    transition: all 0.4s ease;
+}
+
+.stamp:hover .stamp-photo {
+    opacity: 0.55;
+    filter: brightness(1.5);
+}
+
+.stamp-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 4.5rem 0rem;
+    color: #2a2a2a;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 1px 3px rgba(255,255,255,1);
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.stamp:hover .stamp-inner {
+    transform: translateY(-3px);
+}
+
+.stamp-top {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.stamp-rating {
+    font-family: Medicine;
+    font-size: 8rem;
+    color: #2f2f2f;
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.7), 0 3px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.stamp-bottom {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #1c1c1c;
+    z-index: 2;
+}
+
+.rating-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-bottom: 5rem;
+}
+
+.rating-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    color: rgb(226, 192, 0);
+}
+
+.rating-count {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color:#1c1c1c;
+    margin-top: 0.2rem;
+}
+
+.rating-number {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+.rating-display .rating-number {
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/scraps-paper-torn-paper-star-shape-paper-note-page-design-elements-png.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.rating-display .rating-number strong {
+    display: inline-block;
+    transform: rotate(4deg);
+    position: relative;
+    top: 6px;
+    left: -1px;
+}
+
+.reviews-container {
+    padding-bottom: 5rem;
+}
+
+/* View More button */
+.reviews-content button {
+    padding: 0.8rem 2rem;
+    background-color:#292929;
+    color: #ffffff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reviews-content button:hover {
+    background-color: #000000;
+}
+
+.reviews-content button i {
+    margin-right: 8px;
+}
+
+/* Scrollbar Design */
+
+/* For Firefox */
+.stamp-container {
+    scrollbar-width: thin;
+    scrollbar-color: #222222 #ffffff;
+}
+
+/* Chrome, Edge, Safari */
+.stamp-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.stamp-container::-webkit-scrollbar-track {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+.stamp-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #222222, #222222);
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0 0 4px rgba(255,255,255,0.3);
+}
+
+.stamp-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #222222, #222222);
+}
+
+.stamp-container::-webkit-scrollbar-corner {
+    background: #ffffff;
+}
+
+.stamp-scroll-hint {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    font-style: italic;
+    opacity: 0.7;
+    user-select: none;
+    padding-top: 2%;
+}
+
+.review-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 900px;
+    padding: 2rem;
+    border: 2px dashed #f7941d;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #fffefb;
+}
+
+/** SUBMIT REVIEW **/
+
+.submitreview {
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.submitreview-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding-bottom: 4rem;
+    padding-top: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.submitreview-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.submitreview-content p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    color: #3e3e3e;
+    line-height: 1.6;
+}
+
+/* Review form layout */
+.trip-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trip-review input,
+.trip-review textarea {
+    width: 60%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #d1c7b7;
+    background-color: #faf5ef;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.trip-review input:focus,
+.trip-review textarea:focus {
+    border-color: #b89129;
+}
+
+/* Submit button */
+.trip-review button {
+    padding: 0.8rem 2rem;
+    background-color:#292929;
+    color: #ffffff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trip-review button:hover {
+    background-color: #000000;
+}
+
+.trip-review button i {
+    margin-right: 8px;
 }
 
 /** FOOTER **/
@@ -415,7 +849,7 @@ footer {
 
 /** SECTION DESIGN **/
 
-.edgecurve-top {
+.news-top {
     display: block;
     width: 100%;
     height: auto;
@@ -425,7 +859,7 @@ footer {
     pointer-events: none;
 }
 
-.edgecurve-bot {
+.news-bot {
     display: block;
     width: 100%;
     height: auto;
@@ -547,26 +981,44 @@ footer {
         cursor: pointer;
     }
 
-    /** PRIVACY POLICY SECTION **/
+    /** USER REVIEWS SECTION **/
 
-    .privacypolicyheading-content {
+    .userreviewsheading-content {
         padding-bottom: 8rem;
     }
 
-    .privacypolicyheading-section p, .account-content p {
+    .userreviewsheading-section p, .account-content p {
         margin-bottom: 0rem;
     }
 
-    .privacypolicyheading-content .heading {
-        font-size: 5.5rem;
-    }
-
-    .privacypolicyheading-content p {
+    .userreviewsheading-content p {
         font-size: 1.60rem;
     }
 
-    .policy-text {
+    .userreviewsheading-content .heading {
+        font-size: 5.5rem;
+    }
+
+    .reviews-text {
         padding: 0rem 3rem;
+    }
+
+    .review-photo .photo-caption {
+        font-size: 4rem;
+        white-space: nowrap;
+    }
+
+    /* Fading Edges */
+    .stamp-container::before, .stamp-container::after {
+        top: 5rem;
+        width: 100px;
+        height: 70%;
+    }
+
+    /** STAMP **/
+
+    .stamp-container {
+    padding: 50px 50px;
     }
 
     /** FOOTER **/
@@ -664,54 +1116,99 @@ footer {
         background-color: rgb(255, 255, 255);
     }
 
-    /** PRIVACY POLICY SECTION **/
+    /** USER REVIEWS SECTION **/
 
-    .privacypolicyheading-content {
+    .userreviewsheading-content {
         padding: 0rem 0%;
         padding-bottom: 6rem;
     }
 
-    .privacypolicyheading-section {
+    .userreviewsheading-section {
         padding-bottom: 2rem;
     }
 
-    .privacypolicyheading-section .heading, .privacypolicyheading-section p, .policy-content .heading {
+    .userreviewsheading-section .heading, .userreviewsheading-section p, .reviews-content .heading {
         padding: 0rem 30px;
     }
 
-    .privacypolicyheading-section .subtext {
+    .userreviewsheading-section .subtext {
         font-size: 4vw;
     }
 
-    .privacypolicyheading-section .heading {
+    .userreviewsheading-section .heading {
         font-size: 15vw;
         text-align: center;
-    }
-
-    .privacypolicyheading-content .heading {
-        font-size: 2.5rem;
         padding: 0 2rem;
     }
 
-    .policy-content .heading {
+    .reviews-content .heading {
         font-size: 2rem;
     }
 
-    .privacypolicyheading-content .subtext, .policy-content .subtext {
+    .reviews-content .subtext {
         font-size: 1rem;
         padding: 0 1rem;
     }
 
-    .policy-text {
+    .reviews-text {
         padding: 0rem 2rem;
     }
 
-    .policy-content p {
+    .reviews-content p {
         font-size: 1rem;
     }
 
-    .policy-text ul li {
+    .reviews-text ul li {
         font-size: 1rem;
+    }
+
+    .rating-count {
+        font-size: 0.75rem;
+    }
+
+    .rating-number {
+        font-size: 5rem;
+    }
+
+    .review-photo .photo-caption {
+        font-size: 3rem;
+    }
+
+    /** STAMP **/
+    
+    .stamp-center {
+        display: flex;
+        justify-content: center;
+        width: 96.5%;
+    }
+
+    .stamp-container {
+        padding: 50px 50px;
+        gap: 10px;
+    }
+
+    .stampimg {
+        width: auto;
+    }
+
+    .stamp-container {
+        justify-content: flex-start;
+    }
+
+    .stamp-container::before, .stamp-container::after {
+        width: 50px;
+        height: 85%;
+    }
+
+    .stamp-scroll-hint {
+        padding-top: 2rem;
+    }
+
+    /* Fading Edges */
+    .stamp-container::before, .stamp-container::after {
+        top: 5rem;
+        width: 100px;
+        height: 70%;
     }
 
     /** FOOTER **/

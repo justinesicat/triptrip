@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Southwell';
-  src: url('../font/Southwell.ttf') format('truetype');
+    font-family: 'Southwell';
+    src: url('../font/Southwell.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Medicine';
-  src: url('../font/MEDICINE\ SHOW\ CAPS.ttf') format('truetype');
+    font-family: 'Medicine';
+    src: url('../font/MEDICINE\ SHOW\ CAPS.ttf') format('truetype');
 }
 
 * {
@@ -481,7 +481,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .featured-content p {
-    font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #5a4a3f;
     line-height: 1.6;
@@ -589,7 +588,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   font-style: italic;
   opacity: 0.7;
   user-select: none;
-  padding-top: 2%;
+  padding-top: 5%;
 }
 
 /** REVIEWS **/
@@ -624,7 +623,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .reviews-content p {
-    font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #3e3e3e;
     line-height: 1.6;
@@ -633,6 +631,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .reviews-content .subtext {
     padding: 0px 90px;
 }
+
+/* Stamp Design */
 
 .stamp-center {
     display: flex;
@@ -657,7 +657,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     content: "";
     position: absolute;
     top: 0;
-    width: 120px;
+    width: 300px;
     height: 80%;
     pointer-events: none;
     z-index: 2;
@@ -743,7 +743,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .stamp-rating {
-    font-family: medicine;
+    font-family: Medicine;
     font-size: 8rem;
     color: #2f2f2f;
     text-shadow: 0 2px 2px rgba(255, 255, 255, 0.7), 0 3px 10px rgba(0, 0, 0, 0.5);
@@ -794,13 +794,13 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .stamp-scroll-hint {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #222222;
-  font-style: italic;
-  opacity: 0.7;
-  user-select: none;
-  padding-top: 2%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    font-style: italic;
+    opacity: 0.7;
+    user-select: none;
+    padding: 2% 0;
 }
 
 

@@ -1,31 +1,31 @@
 @font-face {
-  font-family: 'Southwell';
-  src: url('../font/Southwell.ttf') format('truetype');
+    font-family: 'Southwell';
+    src: url('../font/Southwell.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Medicine';
-  src: url('../font/MEDICINE\ SHOW\ CAPS.ttf SHOW CAPS.ttf') format('truetype');
+    font-family: 'Medicine';
+    src: url('../font/MEDICINE\ SHOW\ CAPS.ttf') format('truetype');
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
 html, body {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* ensures full viewport height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
-  flex: 1; /* pushes footer to bottom if content is short */
+    flex: 1;
 }
 
 body {
