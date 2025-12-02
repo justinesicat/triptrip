@@ -326,7 +326,9 @@ header {
 }
 
 .policy-text .email {
-    color:#222
+    color: #187148;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .centerlist {
