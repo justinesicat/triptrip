@@ -1,11 +1,18 @@
+<?php
+include 'config.php';
+include 'auth.php';
+
+// Get Search Query and Filters
+$searchQuery = isset($_GET['q']) ? trim($_GET['q']) : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about us | triptrip</title>
-
-    <link rel="stylesheet" href="css/aboutstyle.css">
+    <title>about | triptrip</title>
+    <link rel="stylesheet" href="css/default.css?v=<?php echo time(); ?>">
 
     <!-- Outside References -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,63 +20,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
 </head>
 
 <body>
     
-    <header>
-        <div class="logo-search">
-            <!-- triptrip Logo -->
-            <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
+<header>
+    <div class="logo-search">
+        <!-- triptrip Logo -->
+        <img class="logo-white" src="images/triptripLOGO.png" alt="logo">
 
-            <!-- Search Bar -->
-            <div class="search-bar">
-                <input type="text" placeholder="SEARCH ...">
-                <button onclick="location.href='search.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-        </div>
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <form id="search-form" action="search.php" method="GET">
+            <input type="text" name="q" id="search-input" placeholder="SEARCH...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    </div>
 
-        <!-- Hidden Checkbox for the HAMBURGER -->
-        <input type="checkbox" id="menu-toggle">
+    <!-- Hidden Checkbox for the HAMBURGER -->
+    <input type="checkbox" id="menu-toggle">
 
-        <!-- HAMBURGER icon -->
-        <label for="menu-toggle" class="menu-icon">
-            <i class="fa-solid fa-bars"></i>
+    <!-- Hamburger icon -->
+    <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- Drawer Overlay -->
+    <label for="menu-toggle" class="overlay"></label>
+
+    <!-- Drawer -->
+    <nav id="nav-drawer" class="nav-drawer">
+        <!-- Close for Navigation Drawer -->
+        <label for="menu-toggle" class="close-icon">
+        <i class="fa-solid fa-xmark"></i>
         </label>
 
-        <!-- Drawer for Navigation Drawer -->
-        <label for="menu-toggle" class="overlay"></label>
-
-        <!-- Drawer -->
-        <nav class="nav-drawer">
-            <!-- Close for Navigation Drawer -->
-            <label for="menu-toggle" class="close-icon">
-            <i class="fa-solid fa-xmark"></i>
-            </label>
-
-            <!-- Navigation Links -->
-            <ul class="nav_links">
-            <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+        <!-- Navigation Links -->
+        <ul class="nav_links">
+            <li><a href="index.php"><i class="fa-solid fa-house"></i> HOME</a></li>
 
             <!-- Dropdown Link -->
             <li class="dropdown">
-                <a><i class="fa-solid fa-map"></i> TRIPS</a>
+                <a href="#"><i class="fa-solid fa-map"></i> TRIPS</a>
                 <div class="dropdown-center">
                     <ul class="dropdown-content">
-                        <li><a href="featured.html">FEATURED TRIPS</a></li>
-                        <li><a href="userreviews.html">USER REVIEWS</a></li>
-                </ul>
+                        <li><a href="featured.php">FEATURED TRIPS</a></li>
+                        <li><a href="userreviews.php">USER REVIEWS</a></li>
+                    </ul>
                 </div>
             </li>
 
-            <!-- Navigation Links Continuation -->
-            <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
-            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
-            <li><a href="account.html"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
-            </ul>
-        </nav>
-    </header>
+            <li><a href="about.php"><i class="fa-solid fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="contact.php"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            <li><a href="account.php"><button class="account"><i class="fa-solid fa-user"></i> ACCOUNT</button></a></li>
+        </ul>
+    </nav>
+</header>
 
     <main>
         <!-- Heading -->
@@ -83,7 +90,7 @@
         <!-- First Section / Introduction -->
         <section class="first-section" id="intro">
             <!-- decorative top -->
-            <img class="edgecurve-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
+            <img class="section-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
 
             <div class="first-content">
                 <p class="heading">explore the world</p>
@@ -98,7 +105,7 @@
         <!-- General Section -->            
         <section class="general-section" id="core-purpose">
             <!-- decorative top -->
-            <img class="edgecurve-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
+            <img class="section-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
             
                 <div class="general-content">
                     <div class="general-text">
@@ -119,7 +126,7 @@
 
         <section class="general-section" id="team">
             <!-- decorative top -->
-            <img class="edgecurve-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
+            <img class="section-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
             
                 <div class="general-content">
                     <div class="general-text">
@@ -132,51 +139,58 @@
                         <div class="members-grid">
                             <!-- Ju -->
                             <div class="member-card">
-                                <img src="images/ju.png" alt="Justine T. Sicat">
+                                <img src="images/Sicat_ID.gif" alt="Justine T. Sicat">
                                 <h4>Justine Philip T. Sicat</h4>
-                                <p>Main Page Developer</p>
+                                <br>
+                                <p>Lead Developer</p>
                             </div>
                             
                             <!-- Renz -->
                             <div class="member-card">
-                                <img src="images/ronquillo.jfif" alt="Renz Derick L. Ronquillo">
+                                <img src="images/Ronquillo.gif" alt="Renz Derick L. Ronquillo">
                                 <h4>Renz Derick L. Ronquillo</h4>
-                                <p>Main Page Developer</p>
+                                <br>
+                                <p>Senior Developer</p>
                             </div>
 
                             <!-- Nic -->
                             <div class="member-card">
-                                <img src="images/nic.png" alt="Carl Niccovi P. Salvador">
+                                <img src="images/Salvador_ID.png" alt="Carl Niccovi P. Salvador">
                                 <h4>Carl Niccovi P. Salvador</h4>
-                                <p>"About Us" Page Developer</p>
+                                <br>
+                                <p>Back-end Developer</p>
                             </div>
 
                             <!-- Channelle -->
                             <div class="member-card">
-                                <img src="images/santos.jpg" alt="Chanelle T. Santos">
+                                <img src="images/Santos_ID.gif" alt="Chanelle T. Santos">
                                 <h4>Chanelle T. Santos</h4>
-                                <p>"Contact Us" Page Developer</p>
+                                <br>
+                                <p>Front-end Developer</p>
                             </div>
 
                             <!-- Guim -->
                             <div class="member-card">
-                                <img src="images/guim.jfif" alt="Guillaume Angelo C. Conos">
+                                <img src="images/Conos_ID.gif" alt="Guillaume Angelo C. Conos">
                                 <h4>Guillaume Angelo C. Conos</h4>
-                                <p>Info Provider</p>
+                                <br>
+                                <p>Information Coordinator</p>
                             </div>
                             
                             <!-- Maverick -->
                             <div class="member-card">
-                                <img src="images/dipasupil.jpg" alt="Maverick Adrian C. Dipasupil">
+                                <img src="images/Dipasupil_ID.gif" alt="Maverick Adrian C. Dipasupil">
                                 <h4>Maverick Adrian C. Dipasupil</h4>
-                                <p>Destination Pages Developer</p>
+                                <br>
+                                <p>Database Developer</p>
                             </div>
                             
                             <!--Iman-->
                             <div class="member-card">
-                                <img src="images/iman.jpg" alt="Iman Huson M. Kasim">
+                                <img src="images/Kasim_ID.gif" alt="Iman Huson M. Kasim">
                                 <h4>Iman Huson M. Kasim</h4>
-                                <p>Destination Pages Developer</p>
+                                <br>
+                                <p>Front-end Developer, Content Specialist</p>
                             </div>
                         </div>
 
@@ -187,7 +201,7 @@
         <!-- Last Section -->
         <section class="last-section" id="missionvision">
             <!-- decorative top -->
-            <img class="edgecurve-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
+            <img class="section-top" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
 
             <div class="last-content">
                 <p class="heading">mission and vision</p>
@@ -203,44 +217,58 @@
                 </div>
             </div>
 
-            <!-- decorative bottom -->
-            <img class="edgecurve-bot" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
         </section>
+        <img class="section-bot" src="images/sectiontop/edgecurvetop.webp" alt="" aria-hidden="true">
     </main>
 
-    <!-- FOOTER Section -->
-    <footer>
-        <div class="footer-content">
-            <img class="logo" src="images/triptripLOGO.png" alt="triptrip logo">
+<footer>
+    <div class="footer-content">
+        <!-- Logo -->
+        <img class="logo" src="images/triptripLOGO.png" alt="triptrip logo">
 
-            <!-- Footer Navigation Links -->
-            <div class="footer-links">
-                <a href="about.html" title="About">About</a>
-                <a href="contact.html" title="Contact">Contact</a>
-                <a href="privacypolicy.html" title="Privacy Policy">Privacy Policy</a>
-            </div>
-
-            <!-- Social Media-->
-            <div class="socials">
-                <a href="https://www.facebook.com/triptrip" target="_blank" title="triptrip's Facebook Page">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/triptrip" target="_blank" title="triptrip's Instagram Page">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.x.com/triptrip" target="_blank" title="triptrip's X / Twitter Page">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="https://www.tiktok.com/@triptrip" target="_blank" title="triptrip's TikTok Page">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-            </div>
+        <!-- Footer Navigation Links -->
+        <div class="footer-links">
+            <a href="about.php" title="About">About</a>
+            <a href="contact.php" title="Contact">Contact</a>
+            <a href="privacypolicy.php" title="Privacy Policy">Privacy Policy</a>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2025 triptrip. All Rights Reserved.</p>
+        <!-- Social Media Links -->
+        <div class="socials">
+            <a href="https://www.facebook.com/triptrip" target="_blank" title="triptrip's Facebook Page">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/triptrip" target="_blank" title="triptrip's Instagram Page">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.x.com/triptrip" target="_blank" title="triptrip's X / Twitter Page">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.tiktok.com/@triptrip" target="_blank" title="triptrip's TikTok Page">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
         </div>
-    </footer>
+    </div>
 
+    <!-- Footer Bottom / Year -->
+    <div class="footer-bottom">
+        <p>© <span id="year"></span> triptrip. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="main.js" defer></script>
+<script>
+    // Year Today
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Empty Search Bar
+    document.getElementById('search-form').addEventListener('submit', function(e) {
+    const query = document.getElementById('search-input').value.trim();
+    if (query === '') {
+        e.preventDefault(); // the Search Bar Button is unfunctional
+        alert('Please enter a search term.');
+        }
+    });
+</script>
 </body>
 </html>

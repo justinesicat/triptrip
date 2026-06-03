@@ -97,6 +97,34 @@ header {
     flex-shrink: 0;
 }
 
+.search-bar form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 20px;
+    min-width: 0px;
+}
+
+.search-bar form button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #056839;
+    font-size: 1rem;
+    padding-left: 5px;
+    flex-shrink: 0;
+}
+
 .nav-drawer {
     position: fixed;
     top: 0;
@@ -220,9 +248,11 @@ header {
     cursor: pointer;
 }
 
-/** PRIVACY POLICY SECTION **/
+/** TRIP SECTION **/
 
-.privacypolicyheading-section {
+/* Title Section (Country Name with Subtext) */
+
+.heading-section {
     z-index: 1;
     position: relative;
     overflow: visible;
@@ -230,53 +260,20 @@ header {
     margin: 0;
 }
 
-.privacypolicyheading-content {
+.heading-content {
     box-sizing: border-box;
     display: block;
     width: 100%;
     margin-bottom: -5rem;
     padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     position: relative;
     overflow: visible;
     z-index: 1;
 }
 
-.policy-section {
-    z-index: 1;
-    position: relative;
-    overflow: visible;
-    text-align: center;
-    margin: 0;
-}
-
-.policy-content {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding: 3rem 0%;
-    padding-bottom: 3rem;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    overflow: visible;
-    z-index: 1;
-}
-
-.policy-content .heading {
-    font-size: 3rem;
-    font-family: Elephant;
-    margin-bottom: 1rem;
-    color: #2C2C2C;
-    text-shadow: 0 0 1px black;
-}
-
-.policy-content p {
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
-
-.privacypolicyheading-content .heading {
+.heading-content .heading {
     display: flex;
     justify-content: center;
     text-align: start;
@@ -301,7 +298,7 @@ header {
     100% { text-shadow: 3px 0 8px white; }
 }
 
-.privacypolicyheading-content p {
+.heading-content p {
     text-align: center;
     font-size: 1.25vw;
     color: white;
@@ -310,25 +307,181 @@ header {
     padding-top: 20px;
 }
 
-.policy-text {
-    padding: 0rem 5rem;
+/* First Section */
+
+.first-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
 }
 
-.policy-text ul li {
+.first-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-bottom: -5rem;
+    padding-bottom: 8rem;
+    padding-top: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.first-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.first-content p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Photo of the Introduction */
+
+.review-photo {
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.review-photo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #fffaf2;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    filter:brightness(0.8)
+}
+
+.review-photo .photo-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffdf6;
+    font-family: "Southwell", cursive;
+    font-size: 6rem;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+    border-radius: 5px;
+}
+
+/* Tape on Photo */
+
+.review-photo::before {
+    content: '';
+    position: absolute;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/pngtree-fix-tape-patch-of-clear-transparent-ripped-sticky-stripes-isolated-on-png-image_4902123.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    opacity: 0.3;
+}
+
+/* Middle Section */
+
+.general-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
+}
+
+.general-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-bottom: -5rem;
+    padding-bottom: 8rem;
+    padding-top: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.general-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.general-content h4,
+.general-content h5 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #2C2C2C;
+}
+
+.general-content h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    font-family: Southwell;
+}
+
+.general-content h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.general-content h5 {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.general-content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.general-text {
+    padding: 0rem 7rem;
+}
+
+.general-text ul li,
+.general-text ol li {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     line-height: 1.6;
+    margin: 0 0 1rem 1.5rem;
+    list-style-position: outside;
 }
 
-.policy-text section {
+.general-text section {
     margin: 2.5rem 0rem;
 }
 
-.policy-text .email {
-    color: #187148;
-    font-weight: bold;
-    text-decoration: none;
+.general-text article {
+    text-align: left;
+    line-height: 1.6;
 }
 
 .centerlist {
@@ -339,6 +492,240 @@ header {
 
 .centerlist ul {
     max-width: 1000px;
+}
+
+/* Table Style */
+.schedule-table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    margin: 3rem auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: #3b3b3b;
+    background: #fffdf8;
+    box-shadow: 5px 5px 0px #f0e0c0, 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0d59d;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.schedule-table th {
+    background-color: #F7941D;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    border-bottom: 2px dashed #f8c37a;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+.schedule-table td {
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px dashed #f0d59d;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #fff9ef;
+}
+
+.schedule-table tr:hover {
+    background-color: #fff3e0;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-table td:first-child {
+    font-weight: 700;
+    color: #2b2b2b;
+    text-transform: uppercase;
+}
+
+.schedule-table td:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Last Section */
+
+.last-section {
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin: 0;
+}
+
+.last-content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding-bottom: 6rem;
+    padding-top: 3rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+    z-index: 1;
+}
+
+.last-content .heading {
+    font-size: 3rem;
+    font-family: Elephant;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+    text-shadow: 0 0 1px black;
+}
+
+.last-content p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3e3e3e;
+    line-height: 1.6;
+}
+
+.last-content .gcap {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3e3e3e;
+    font-style: italic;
+    padding-bottom: 1rem;
+}
+
+/* GALLERY SECTION */
+.gallery-image {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 2rem 0;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* SLIDES */
+
+.slide {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.slide:hover img {
+    filter: brightness(1.2);
+}
+
+.toggle {
+    display: none;
+}
+
+.slide .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.toggle:checked + .slide img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3);
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    z-index: 1000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.toggle:checked + .slide .overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay {
+    cursor: pointer;
+}
+
+/* Scrollbar Design */
+
+/* For Firefox */
+.stamp-container {
+    scrollbar-width: thin;
+    scrollbar-color: #222222 #ffffff;
+}
+
+/* Chrome, Edge, Safari */
+.carousel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #222222, #222222);
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0 0 4px rgba(255,255,255,0.3);
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #222222, #222222);
+}
+
+.carousel::-webkit-scrollbar-corner {
+    background: #ffffff;
+}
+
+.gallery-scroll-hint {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    font-style: italic;
+    opacity: 0.7;
+    user-select: none;
+    padding: 2% 0;
 }
 
 /** FOOTER **/
@@ -417,7 +804,7 @@ footer {
 
 /** SECTION DESIGN **/
 
-.edgecurve-top {
+.section-top {
     display: block;
     width: 100%;
     height: auto;
@@ -427,7 +814,7 @@ footer {
     pointer-events: none;
 }
 
-.edgecurve-bot {
+.section-bot {
     display: block;
     width: 100%;
     height: auto;
@@ -549,32 +936,29 @@ footer {
         cursor: pointer;
     }
 
-    /** PRIVACY POLICY SECTION **/
+    /** TOP SECTION **/
 
-    .privacypolicyheading-content {
+    .heading-content {
         padding-bottom: 8rem;
     }
 
-    .privacypolicyheading-section p, .account-content p {
+    .heading-section p,
+    .general p {
         margin-bottom: 0rem;
     }
 
-    .privacypolicyheading-content .heading {
-        font-size: 5.5rem;
-    }
-
-    .privacypolicyheading-content p {
+    .heading-content p {
         font-size: 1.60rem;
     }
 
-    .policy-text {
-        padding: 0rem 3rem;
+    .heading-content .heading {
+        font-size: 5.5rem;
     }
 
     /** FOOTER **/
 
     .logo {
-    padding-top: 0rem;
+        padding-top: 0rem;
     }
     
 }
@@ -666,60 +1050,85 @@ footer {
         background-color: rgb(255, 255, 255);
     }
 
-    /** PRIVACY POLICY SECTION **/
+    /** TOP SECTION **/
 
-    .privacypolicyheading-content {
+    .heading-content {
         padding: 0rem 0%;
         padding-bottom: 6rem;
     }
 
-    .privacypolicyheading-section {
+    .heading-section {
         padding-bottom: 2rem;
     }
 
-    .privacypolicyheading-section .heading, .privacypolicyheading-section p, .policy-content .heading {
+    .heading-section .heading,
+    .heading-section p,
+    .general-content .heading,
+    .last-content .heading {
         padding: 0rem 30px;
     }
 
-    .privacypolicyheading-section .subtext {
+    .heading-section .subtext {
         font-size: 4vw;
     }
 
-    .privacypolicyheading-section .heading {
+    .heading-section .heading {
         font-size: 15vw;
         text-align: center;
-    }
-
-    .privacypolicyheading-content .heading {
-        font-size: 2.5rem;
         padding: 0 2rem;
     }
 
-    .policy-content .heading {
+    /** GENERAL SECTION **/
+
+    .review-photo::before {
+        top: -50px;
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .first-content,
+    .last-content {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .first-content .heading,
+    .general-content .heading,
+    .last-content .heading {
         font-size: 2rem;
     }
 
-    .privacypolicyheading-content .subtext, .policy-content .subtext {
+    .general-content .subtext {
         font-size: 1rem;
         padding: 0 1rem;
     }
 
-    .policy-text {
+    .general-text {
         padding: 0rem 2rem;
     }
 
-    .policy-content p {
+    .first-content p,
+    .general-content p,
+    .last-content p {
         font-size: 1rem;
     }
 
-    .policy-text ul li {
+    .general-text ul li,
+    .general-text ol li {
         font-size: 1rem;
+    }
+
+    .schedule-table {
+        width: 55%;
+        font-size: 0.9rem;
+        box-shadow: 2px 2px 0px #f0e0c0, 5px 5px 10px rgba(0, 0, 0, 0.1);
     }
 
     /** FOOTER **/
 
     .logo {
-    padding-top: 0rem;
+        padding-top: 0rem;
     }
 
 }
