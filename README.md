@@ -1,12 +1,12 @@
-# 🌍 TripTrip
+# 🌍 triptrip
 
-A travel and tourism website designed to help users explore destinations, discover featured tourist spots, and share travel experiences. TripTrip provides a user-friendly platform for browsing landmarks, destination details, and community reviews.
+A travel and tourism website designed to help users explore destinations, discover featured tourist spots, and share travel experiences. *triptrip* provides a user-friendly platform for browsing landmarks, destination details, and community reviews.
 
 Currently hosting the website @ https://triptrip.freehosting.dev (last updated June 05, 2026).
 
 ## 📌 Overview
 
-TripTrip is a web-based tourism platform developed as an academic project. It allows users to explore travel destinations, create accounts, manage profiles, and interact with travel-related content.
+*triptrip* is a web-based tourism platform developed as an academic project. It allows users to explore travel destinations, create accounts, manage profiles, and interact with travel-related content.
 
 The system aims to make travel discovery easier through featured destinations, searchable content, and user reviews.
 
