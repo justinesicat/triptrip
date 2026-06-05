@@ -1,6 +1,8 @@
 # 🌍 TripTrip
 
-A travel and tourism web application designed to help users explore destinations, discover featured tourist spots, and share travel experiences. TripTrip provides a user-friendly platform for browsing landmarks, destination details, and community reviews.
+A travel and tourism website designed to help users explore destinations, discover featured tourist spots, and share travel experiences. TripTrip provides a user-friendly platform for browsing landmarks, destination details, and community reviews.
+
+Currently hosting the website @ https://triptrip.freehosting.dev (last updated June 05, 2026).
 
 ## 📌 Overview
 
@@ -36,25 +38,27 @@ The system aims to make travel discovery easier through featured destinations, s
 
 ```txt
 triptrip/
-│── index.php                # Homepage
 │── about.php                # About page
+│── account.php              # User account management
+│── auth.php                 # Authentication logic
+│── config.php               # Database/configuration
 │── contact.php              # Contact page
+│── dashboard.php            # Dashboard page
 │── destination.php          # Destination listings/details
+│── error.php                # Error display page
 │── featured.php             # Featured destinations
+│── index.php                # Homepage
+│── login.php                # Login page
+│── logout.php               # Logout handler
+│── manage.php               # Management functionality
+│── privatepolicy.php        # Private Policy page
+│── register.php             # Registration page
 │── search.php               # Search functionality
 │── userreviews.php          # User reviews
-│── login.php                # Login page
-│── register.php             # Registration page
-│── account.php              # User account management
-│── dashboard.php            # Dashboard page
-│── manage.php               # Management functionality
-│── auth.php                 # Authentication logic
-│── logout.php               # Logout handler
-│── config.php               # Database/configuration
 │── css/                     # Stylesheets
-│── js/                      # JavaScript files
-│── images/                  # Website images & assets
 │── font/                    # Custom fonts
+│── images/                  # Website images & assets
+│── js/                      # JavaScript files
 │── sql/                     # SQL file
 ```
 
