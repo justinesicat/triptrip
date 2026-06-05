@@ -55,6 +55,7 @@ triptrip/
 │── js/                      # JavaScript files
 │── images/                  # Website images & assets
 │── font/                    # Custom fonts
+│── sql/                     # SQL file
 ```
 
 ## 🛠 Tech Stack
