@@ -52,6 +52,7 @@ triptrip/
 │── logout.php               # Logout handler
 │── manage.php               # Management functionality
 │── privatepolicy.php        # Private Policy page
+│── README.md                # Project documentation
 │── register.php             # Registration page
 │── search.php               # Search functionality
 │── userreviews.php          # User reviews
